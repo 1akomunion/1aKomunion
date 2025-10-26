@@ -32,12 +32,12 @@ nav {
   justify-content: center;
   gap: 1rem;
   padding: 0.6rem;
-  border-top: 2px solid #ff0000;
-  border-bottom: 2px solid #ff0000;
+  border-top: 2px solid #ac40f8;    /* línea morada arriba */
+  border-bottom: 2px solid #ac40f8; /* línea morada abajo */
 }
 
 nav a {
-  color: #fff;
+  color: #ffff00;                   /* texto amarillo */
   text-decoration: none;
   font-weight: bold;
   letter-spacing: 0.5px;
@@ -47,12 +47,13 @@ nav a {
 }
 
 nav a:hover {
-  background: #ff0000;
-  color: #fff;
+  background: #ac40f8;              /* fondo morado */
+  color: #ff0000;                   /* texto rojo */
+  text-decoration: underline;
 }
 
 nav a.active {
-  color: #ff0000;
+  color: #ff0000;                   /* rojo para la página activa */
   text-decoration: underline;
 }
 
@@ -169,6 +170,7 @@ footer {
 @media (max-width: 768px) {
   nav {
     gap: 0.5rem;
+    border-width: 1px;
   }
 
   nav a {
@@ -188,12 +190,23 @@ footer {
 }
 
 @media (max-width: 480px) {
+  header img.logo {
+    width: 90%;
+  }
+
   .btn-entrar {
     font-size: 1rem;
     padding: 0.6rem 1.4rem;
   }
 
-  header img.logo {
-    width: 90%;
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 }
