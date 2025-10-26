@@ -4,125 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Imágenes - 1ª Komunión</title>
-  <meta name="description" content="Galería de fotografías del grupo 1ª Komunión">
-  <link rel="icon" href="http://www.1akomunion.es/favicon.ico">
-
-  <style>
-    body {
-       background: #000;
-    }
-
-    header {
-      text-align: center;
-      padding: 1rem 0 0.5rem;
-      background: rgba(0, 0, 0, 0.55);
-    }
-
-    header img.logo {
-      width: 340px;
-      max-width: 90%;
-      height: auto;
-    }
-
-    /* Menú superior */
-    nav {
-      background: rgba(0, 0, 0, 0.7);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      padding: 0.6rem;
-      border-top: 2px solid #ff0000;
-      border-bottom: 2px solid #ff0000;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      letter-spacing: 0.5px;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-    }
-
-    nav a:hover {
-      background: #ff0000;
-      color: #fff;
-    }
-
-    nav a.active {
-      color: #ff0000;
-      text-decoration: underline;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      background: rgba(0, 0, 0, 0.55);
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-    }
-
-    h1 {
-      color: #ff0000;
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    /* Galería */
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
-
-    .galeria a {
-      display: block;
-      overflow: hidden;
-      border-radius: 8px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .galeria img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-    }
-
-    .galeria a:hover img {
-      transform: scale(1.05);
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: rgba(0, 0, 0, 0.6);
-      border-top: 1px solid #444;
-      font-size: 0.85rem;
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        gap: 0.5rem;
-      }
-      nav a {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
-      }
-      main {
-        margin: 1rem;
-        padding: 1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Galería de imágenes del grupo 1ª Komunión">
 </head>
-
-<body>
+<body style="background:#000;">
   <header>
     <img src="imagenes/texto%20logo1.gif" alt="1ª Komunión" class="logo">
   </header>
@@ -139,31 +24,10 @@
   </nav>
 
   <main>
-    <h1>Galería de imágenes</h1>
-
+    <h1>Imágenes</h1>
     <div class="galeria">
-      <!-- Sustituye o añade aquí tus imágenes manteniendo los nombres originales -->
-      <a href="imagenes/foto%20oficial%20[1024x768].jpg" target="_blank">
-        <img src="imagenes/foto%20oficial%20[320x200].gif" alt="Foto oficial del grupo">
-      </a>
-
-      <a href="imagenes/Bici.jpg" target="_blank">
-        <img src="imagenes/Bici.jpg" alt="Antonio Bicicleta Díaz">
-      </a>
-
-      <a href="imagenes/PATRI.jpg" target="_blank">
-        <img src="imagenes/PATRI.jpg" alt="Patricio Tomás">
-      </a>
-
-      <a href="imagenes/Luis.jpg" target="_blank">
-        <img src="imagenes/Luis.jpg" alt="Luis Solaz">
-      </a>
-
-      <a href="imagenes/MADRI.jpg" target="_blank">
-        <img src="imagenes/MADRI.jpg" alt="Jesús El Madri Gallardo">
-      </a>
-
-      <!-- Puedes seguir añadiendo más imágenes aquí -->
+      <a href="imagenes/foto1.jpg"><img src="imagenes/foto1.jpg" alt="Foto 1"></a>
+      <a href="imagenes/foto2.jpg"><img src="imagenes/foto2.jpg" alt="Foto 2"></a>
     </div>
   </main>
 
