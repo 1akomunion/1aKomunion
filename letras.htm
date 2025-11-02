@@ -1,450 +1,2445 @@
-<!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Letras - 1¬™ Komuni√≥n</title>
-  <meta name="description" content="Audio y letras de nuestros temas.">
-  <link rel="icon" href="http://www.1akomunion.es/favicon.ico">
-  <link rel="stylesheet" href="css/style.css">
-
-  <style>
-    /* Fondo negro exclusivo para esta p√°gina */
-    body { background: #000; }
-
-    main {
-      max-width: 1000px;
-      margin: 1.5rem auto;
-      padding: 1.2rem;
-      background: rgba(0,0,0,0.6);
-      border-radius: 10px;
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Letras - 1™ KomuniÛn</title>
+    <meta name="description" content="Letras de las canciones de 1™ KomuniÛn">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      font-family: Verdana, sans-serif;
     }
 
-    .caratulas {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1rem;
-      align-items: start;
-      margin-bottom: 1.25rem;
-    }
-
-    .caratula {
+    header {
       text-align: center;
-      background: rgba(30,30,30,0.85);
-      padding: 0.8rem;
-      border-radius: 8px;
+      padding: 20px 10px 10px;
     }
 
-    .caratula img {
-      max-width: 100%;
+    header img {
+      width: 340px;
+      max-width: 90%;
       height: auto;
-      display: block;
-      margin: 0 auto 0.6rem;
+    }
+
+    nav {
+      text-align: center;
+      border-top: 2px solid #ac40f8;
+      border-bottom: 2px solid #ac40f8;
+      padding: 10px 0;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      color: #ffff00;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ac40f8;
+      color: #ff0000;
+      padding: 4px 8px;
       border-radius: 6px;
     }
 
-    .caratula .links {
-      font-size: 0.92rem;
-      line-height: 1.5;
-      color: #fff;
-    }
-
-    .caratula .links a {
-      color: #fff;
-      text-decoration: none;
-      display: block;
-      padding: 4px 0;
-      transition: color .15s ease, transform .12s ease;
-    }
-
-    .caratula .links a:hover {
+    nav a.active {
       color: #ff0000;
-      transform: translateX(4px);
+      text-decoration: underline;
     }
 
-    /* √çndice r√°pido */
-    .indice {
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
       text-align: center;
-      margin-bottom: 1rem;
+      color: #ff0000;
+      margin-bottom: 40px;
     }
-    .indice a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 .4rem;
-      padding: 0.2rem .45rem;
-      border-radius: 5px;
-      transition: background .15s ease, color .15s ease;
-    }
-    .indice a:hover { background: rgba(255,0,0,0.08); color: #ff0000; }
 
-    /* Secci√≥n de letra */
     .letra {
-      margin: 2rem 0;
-      padding: 1rem;
-      background: rgba(10,10,10,0.45);
-      border-radius: 8px;
+      margin: 30px 0;
+      padding: 20px;
+      background: rgba(30, 30, 30, 0.8);
+      border-radius: 10px;
     }
 
     .letra h2 {
       color: #ff0000;
-      font-size: 1.4rem;
       text-align: center;
-      margin: 0 0 0.6rem;
+      margin-top: 0;
     }
 
     .letra pre {
       white-space: pre-wrap;
+      word-wrap: break-word;
       text-align: center;
+      line-height: 1.6;
       color: #fff;
-      font-family: "Verdana", sans-serif;
-      font-size: 0.95rem;
-      line-height: 1.55;
-      margin: 0;
     }
 
     .volver-arriba {
       text-align: center;
-      margin-top: .8rem;
+      margin-top: 10px;
     }
 
     .volver-arriba a {
       color: #ffff00;
       text-decoration: none;
-      font-size: 0.95rem;
+    }
+
+    .volver-arriba a:hover {
+      color: #ac40f8;
     }
 
     footer {
-      margin-top: 2rem;
+      text-align: center;
+      padding: 15px 0;
+      border-top: 1px solid #ac40f8;
+      font-size: 0.9rem;
+      margin-top: 50px;
+      color: #888;
     }
 
-    @media (max-width:600px) {
-      main { margin: 1rem; padding: 0.9rem; }
-      .caratula .links { font-size: 0.88rem; }
-      .letra h2 { font-size: 1.15rem; }
-      .letra pre { font-size: 0.92rem; }
+    @media (max-width: 600px) {
+      nav a {
+        display: inline-block;
+        margin: 5px 6px;
+        font-size: 0.9rem;
+      }
+      .letra {
+        padding: 15px;
+      }
     }
   </style>
-</head>
-
-<body>
-  <header>
-    <img src="imagenes/texto%20logo1.gif" alt="1¬™ Komuni√≥n" class="logo">
-  </header>
-
-  <nav>
-    <a href="inicio.htm">Inicio</a>
-    <a href="biografia.htm">Biograf√≠a</a>
-    <a href="discografia.htm">Discograf√≠a</a>
-    <a href="letras.htm" class="active">Letras</a>
-    <a href="imagenes.htm">Im√°genes</a>
-    <a href="videos.htm">Videos</a>
-    <a href="prensa.htm">Prensa</a>
-  <a href="https://www.facebook.com/1aKomunion">Facebook</a>
-  </nav>
-
-  <main>
-    <h1 style="text-align:center; color:#ff0000;">Letras y audio</h1>
-
-    <!-- Car√°tulas y enlaces: mantenemos rutas y nombres EXACTOS -->
-    <section class="caratulas" aria-label="Car√°tulas y enlaces a letras">
-      <div class="caratula">
-        <a href="imagenes/Caratula_konfirmacion%20[800x600].jpg" target="_blank">
-          <img src="imagenes/Caratula_konfirmacion%20[151].jpg" alt="Konfirmaci√≥n">
-        </a>
-        <div class="links">
-          <!-- enlaces conservados tal como en el archivo original -->
-          <a href="#Ajedrez_mortal">Ajedrez Mortal</a>
-          <a href="#Ni√±o_Anarquista">Ni√±o Anarquista</a>
-          <a href="#Apestados_Unidos">Apestados Unidos</a>
-          <a href="#Jose_Luis">Jose Luis</a>
-          <a href="#El_ozono">El Ozono</a>
-          <a href="#El_monstruo">El Monstruo</a>
-          <a href="#Solo_ordenes">S√≥lo √ìrdenes</a>
-          <a href="#Principe_Azul">Pr√≠ncipe Azul</a>
-          <a href="#Pide_Perdon">Pide Perd√≥n</a>
-          <a href="#El_Racismo">El Racismo</a>
-          <a href="#Secuestro_legal">Secuestro legal</a>
-          <a href="#Apocalipsis_I">Apocalipsis I</a>
-          <a href="#Queria_el_mundo_cambiar">Quer√≠a el mundo cambiar (v√≠deo)</a>
-        </div>
-      </div>
-
-      <div class="caratula">
-        <a href="imagenes/_1_komunion1.jpg" target="_blank">
-          <img src="imagenes/_1_komunion1.jpg" alt="1¬™ Komunion (car√°tula)">
-        </a>
-        <div class="links">
-          <a href="#Tu_trozo_de_libertad">Tu trozo de libertad</a>
-          <a href="#Inseguridad_Social">Inseguridad Social</a>
-          <a href="#Hambre">Hambre</a>
-          <a href="#Ser_alcalde">Ser alcalde...</a>
-          <a href="#Consumir">Consumir</a>
-          <a href="#Que_se_voten_ellos">Que se voten ellos</a>
-          <a href="#Hombre_Salvaje">Hombre salvaje</a>
-          <a href="#El_mangui">El mangui</a>
-          <a href="#No_puede_ser">No puede ser</a>
-          <a href="#Francisquillo">Francisquillo</a>
-          <a href="#Goodway_Paco">Goodway Paco</a>
-        </div>
-      </div>
-
-      <div class="caratula">
-        <a href="imagenes/dvd600.jpg" target="_blank">
-          <img src="imagenes/dvd150.jpg" alt="Resurrekci√≥n (DVD)">
-        </a>
-        <div class="links">
-          <a href="#ResurreccionInfo">Resurrekci√≥n - informaci√≥n</a>
-          <a href="#Temas_DVD">Temas incluidos (DVD)</a>
-        </div>
-      </div>
-
-      <div class="caratula">
-        <a href="imagenes/_maqueta2.jpg" target="_blank">
-          <img src="imagenes/_maqueta2.jpg" alt="Tour 89">
-        </a>
-        <div class="links">
-          <a href="#Primera_Komunion">Primera Komuni√≥n</a>
-          <a href="#Iran_Iraq">Ir√°n - Iraq</a>
-          <a href="#Soldadito_Espanol">Soldadito Espa√±ol</a>
-          <a href="#Si_fuera_Dios">Si fuera Dios</a>
-          <a href="#Platanos">Pl√°tanos...</a>
-          <a href="#Suena_la_sirena">Suena la sirena</a>
-          <a href="#Mierda_y_sangre">Mierda y sangre</a>
-          <a href="#El_puto_sabor">El puto sabor</a>
-          <a href="#En_el_culo">En el culo</a>
-          <a href="#Ulcera">Ulcera</a>
-        </div>
-      </div>
-
-      <!-- A√±ade aqu√≠ m√°s car√°tulas si las hay en la carpeta im√°genes -->
-      <div class="caratula">
-        <a href="imagenes/_matraka_1.jpg" target="_blank">
-          <img src="imagenes/_matraka_1.jpg" alt="Matraka Monsters">
-        </a>
-        <div class="links">
-          <a href="#Malditos_concursos">Malditos concursos</a>
-          <a href="#La_fiesta">La fiesta</a>
-        </div>
-      </div>
-
-      <div class="caratula">
-        <a href="imagenes/_single_ivaj1.jpg" target="_blank">
-          <img src="imagenes/_single_ivaj1.jpg" alt="Circuito Rock">
-        </a>
-        <div class="links">
-          <a href="#Barrios_bajos">Barrios bajos</a>
-          <a href="#Apocalipsis_II">Apocalipsis II</a>
-        </div>
-      </div>
-
-      <div class="caratula">
-        <a href="imagenes/_babia2.jpg" target="_blank">
-          <img src="imagenes/_babia2.jpg" alt="Rocke'n'Babia">
-        </a>
-        <div class="links">
-          <a href="#Huelga_de_hambre">Huelga de hambre (directo)</a>
-        </div>
-      </div>
-
-      <!-- Puedes a√±adir m√°s bloques .caratula con las im√°genes que uses -->
-    </section>
-
-    <!-- √çNDICE R√ÅPIDO -->
-    <div class="indice" aria-label="√çndice de letras">
-      <!-- conservamos los anclajes internos como en la versi√≥n cl√°sica -->
-      <a href="#Primera_Komunion">Primera Komuni√≥n</a> |
-      <a href="#Iran_Iraq">Ir√°n - Iraq</a> |
-      <a href="#Soldadito_Espanol">Soldadito Espa√±ol</a> |
-      <a href="#Si_fuera_Dios">Si fuera Dios</a> |
-      <a href="#Platanos">Pl√°tanos...</a> |
-      <a href="#Suena_la_sirena">Suena la sirena</a>
-      <!-- A√±ade m√°s si quieres -->
-    </div>
-
-    <!-- LETRAS (todas en la misma p√°gina, centradas) -->
-    <!-- Conservamos los IDs / anclas tal y como estaban para que los enlaces funcionen -->
-    <article id="Primera_Komunion" class="letra" aria-labelledby="t-Primera_Komunion">
-      <h2 id="t-Primera_Komunion">Primera Komuni√≥n</h2>
-      <pre>
-Yo ten√≠a 9 a√±os,
-y como no, iba a un colegio de Hermanos.
-Me ense√±aron todos los pecados capitales,
-pero no me dijeron ninguna de las mayores verdades.
-
-   Por un sucio sacramento
-Una iglesia llena de ni√±os,
-todos vestiditos iguales.
-Dinero gastado en vano;
-El viejo sin un duro en los bolsillos.
-
-(Abre el bolsillo y cierra la boca)
-
-   Por un sucio sacramento
-      </pre>
-      <div class="volver-arriba"><a href="#top">(Volver arriba)</a></div>
-    </article>
-
-    <article id="Iran_Iraq" class="letra" aria-labelledby="t-Iran_Iraq">
-      <h2 id="t-Iran_Iraq">Ir√°n - Iraq</h2>
-      <pre>
-Ir√°n, Iraq. Ir√°n, Iraq. Ir√°n, Iraq... Petr√≥leo.
-Ir√°n, Iraq. Ir√°n, Iraq. Ir√°n, Iraq... Agobio.
-Ir√°n, Iraq. Ir√°n, Iraq. Ir√°n, Iraq... Religi√≥n.
-Ir√°n, Iraq. Ir√°n, Iraq. Ir√°n, Iraq... Maldici√≥n.
-Ir√°n, Iraq. Ir√°n, Iraq. Ir√°n, Iraq... Armas.
-Ir√°n, Iraq. Ir√°n, Iraq. Ir√°n, Iraq... Almas.
-(Yeah... Penyagolosa)
-      </pre>
-      <div class="volver-arriba"><a href="#top">(Volver arriba)</a></div>
-    </article>
-
-    <article id="Soldadito_Espanol" class="letra" aria-labelledby="t-Soldadito_Espanol">
-      <h2 id="t-Soldadito_Espanol">Soldadito Espa√±ol</h2>
-      <pre>
-Pas√© un a√±o entero,
-oprimido por negreros.
-Estrellas y galones,
-me tocaron los cojones.
-
-   Las pelotas en la puerta,
-   me dijeron al entrar.
-   Aqu√≠ har√°s lo que te digan,
-   Y la boca cerrar√°s!
-
-Me llevaron a la Jura...
-Y para colmo hab√≠a un cura.
-Ej√©rcito y clero,
-se reparten el dinero.
-
-Esto pronto se va a acabar.
-Esto pronto terminar√°.
-Por su Patria y su bandera
-mi sangre no correr√°!
-      </pre>
-      <div class="volver-arriba"><a href="#top">(Volver arriba)</a></div>
-    </article>
-
-    <article id="Si_fuera_Dios" class="letra" aria-labelledby="t-Si_fuera_Dios">
-      <h2 id="t-Si_fuera_Dios">Si fuera Dios</h2>
-      <pre>
-Si yo pudiera ser Dios, curar√≠a a los enfermos,
-pero como no lo soy, escupo a los necios.
-Si yo pudiera ser Dios, no trabajar√≠a jam√°s,
-pero como no lo soy, hago currar a los dem√°s.
-
-   Padre Nuestro, (Nuestro Se√±or)
-   Padre Nuestro, (Santificado)
-
-Si yo pudiera ser Dios, har√≠a ver a los ciegos,
-pero como no lo soy, tapo los ojos con dinero.
-Si yo pudiera adivinar el futuro... no se lo dir√≠a a nadie
-si yo pudiera ser Dios... ¬°Ay madre!
-      </pre>
-      <div class="volver-arriba"><a href="#top">(Volver arriba)</a></div>
-    </article>
-
-    <article id="Platanos" class="letra" aria-labelledby="t-Platanos">
-      <h2 id="t-Platanos">Pl√°tanos...</h2>
-      <pre>
-Cientos de monos controlan las calles,
-cientos de monos te quieren aplastar.
-Cientos de monos con uniforme,
-mierda de monos, os vamos a matar!
-
-   Pl√°tanos... pa los monos.
-   Pl√°tanos... os vamos a dar.
-
-Sois una raza en extinci√≥n
-sin vuestras pistolas no hay valor.
-Nosotros aguantamos todo el mogoll√≥n.
-Perros de mierda, morir√©is sin honor.
-      </pre>
-      <div class="volver-arriba"><a href="#top">(Volver arriba)</a></div>
-    </article>
-
-    <article id="Suena_la_sirena" class="letra" aria-labelledby="t-Suena_la_sirena">
-      <h2 id="t-Suena_la_sirena">Suena la sirena</h2>
-      <pre>
-Suena, siempre suena, la puta sirena.
-Son las ocho en punto... ¬°Hay que trabajar!
-El jefe te grita, ya no aguantas m√°s.
-Basta ya de historias, ¬°Vas a reventar!
-
-   Tu eres el explotado,
-   tu est√°s muy mal pagado.
-   Tu sangre est√°s vomitando,
-   morir√°s como un esclavo.
-
-Han dado las seis, te quieres pirar.
-Por hoy ya es bastante... ¬°Ma√±ana ser√° igual!
-      </pre>
-      <div class="volver-arriba"><a href="#top">(Volver arriba)</a></div>
-    </article>
-
-    <article id="Mierda_y_sangre" class="letra" aria-labelledby="t-Mierda_y_sangre">
-      <h2 id="t-Mierda_y_sangre">Mierda y sangre</h2>
-      <pre>
-No hay m√°s noble animal, que el toro Nacional.
-Si te portas mal, con la daga acabar√°s,
-y por culo te dar√°n, en la fiesta Nazi-nacional.
-
-   ¬°Mierda y Sangre!
-      </pre>
-      <div class="volver-arriba"><a href="#top">(Volver arriba)</a></div>
-    </article>
-
-    <article id="El_puto_sabor" class="letra" aria-labelledby="t-El_puto_sabor">
-      <h2 id="t-El_puto_sabor">El puto sabor</h2>
-      <pre>
-Quiero comer Fritos, a ver si los vomito.
-Si t√∫ est√°s a mi lado ver√°s lo que es...
-El puto, el puto, el puto sabor.
-
-   Americano. Americano. Americano. A - me - ricano.
-      </pre>
-      <div class="volver-arriba"><a href="#top">(Volver arriba)</a></div>
-    </article>
-
-    <article id="En_el_culo" class="letra" aria-labelledby="t-En_el_culo">
-      <h2 id="t-En_el_culo">En el culo</h2>
-      <pre>
-He intentado un suicidio, un suicidio por amor.
-Ahora tengo mucho miedo, y en el culo ¬°un cagall√≥n!
-
-   Los ni√±atos, los mo√±atos, los que bailan tecno-pop,
-   ahora tienen mucho miedo, y en el culo ¬°un cagall√≥n!
-
-Los Hermanos de la Salle son m√°s buenos que el cop√≥n,
-Los Hermanos de la Salle, ¬°que nos llevan de excursi√≥n!
-      </pre>
-      <div class="volver-arriba"><a href="#top">(Volver arriba)</a></div>
-    </article>
-
-    <article id="Ulcera" class="letra" aria-labelledby="t-Ulcera">
-      <h2 id="t-Ulcera">Ulcera</h2>
-      <pre>
-Entro en el bar, y no puedo aguantar
-el beber cerveza o beber pachar√°n.
-Pido que me pongan algo de privar.
-Pido que me pongan ¬°Lo que sea ya!
-
-   ¬°Ahhhh me da el ardor. Joder qu√© mal.
-   Podrida √∫lcera gastroduodenal.
-   Me tomo por un tubo el prinper√°n.
-   Y anti√°cidos no me quedan ya.
-      </pre>
-      <div class="volver-arriba"><a href="#top">(Volver arriba)</a></div>
-    </article>
-
-    <!-- NOTA: He incluido las letras principales que aparecen en el HTML original.
-         Si falta alguna letra concreta o quieres que mantenga exactamente
-         cada p√°rrafo y ancla tal cual estaba en el HTML antiguo, d√≠melo 
-         y la pego textualmente.  -->
-
-  </main>
-
-  <footer>
-    &copy; 1¬™ Komuni√≥n - Todos los derechos reservados
-  </footer>
-</body>
+  </head>
+  <body>
+    <header> <img src="imagenes/texto%20logo1.gif" alt="1™ KomuniÛn"> </header>
+    <nav> <a href="inicio.htm">Inicio</a> | <a href="biografia.htm">BiografÌa</a>
+      | <a href="discografia.htm">DiscografÌa</a> | <a href="letras.htm" class="active">Letras</a>
+      | <a href="imagenes.htm">Im·genes</a> | <a href="videos.htm">VÌdeos</a>
+      | <a href="prensa.htm">Prensa</a> | <a href="mailto:1akomunion@gmail.com">Contacto</a>
+    </nav>
+    <main>
+      <div style="text-align: center;"><font face="Arial" size="1"> <img src="imagenes/_maqueta2.jpg"
+            border="1" height="96" width="150"></font><font face="Arial" size="1">
+          <img src="imagenes/_1_komunion1.jpg" border="1" height="150" width="150"></font><img
+          src="imagenes/Caratula_konfirmacion%20[151].jpg" border="0" height="136"
+          width="150"></div>
+      <p class="MsoNormal" style="text-align: center;"><font face="Verdana"><a href="#1%AA_Komuni%F3n._">
+            <b> <font color="#FFFFFF" size="2">Primera<span lang="ES-TRAD">
+                  KomuniÛn</span></font></b><span lang="ES-TRAD"><font color="#FFFFFF"
+                size="2">. </font> </span></a></font></p>
+      <p class="MsoNormal" style="text-align: center;"><font face="Verdana"><a href="#Ir%E1n_-_Iraq"><b>
+              <span lang="ES-TRAD"><font color="#FFFFFF" size="2">Ir·n - Iraq</font></span></b><span
+              lang="ES-TRAD"><font color="#FFFFFF" size="2">. </font> </span></a></font></p>
+      <p class="MsoNormal" style="text-align: center;"><font face="Verdana"><a href="#Soldadito_Espa%F1ol"><b>
+              <span lang="ES-TRAD"><font color="#FFFFFF" size="2">Soldadito
+                  EspaÒol</font></span></b><span lang="ES-TRAD"><font color="#FFFFFF"
+                size="2">. </font> </span></a></font></p>
+      <p class="MsoNormal" style="text-align: center;"><font face="Verdana"><a href="#Si_fuera_Dios"><b>
+              <span lang="ES-TRAD"><font color="#FFFFFF" size="2">Si fuera Dios</font></span></b><span
+              lang="ES-TRAD"><font color="#FFFFFF" size="2">. </font> </span></a></font></p>
+      <p class="MsoNormal" style="text-align: center;"><font face="Verdana"><a href="#Pl%E1tanos..._"><b>
+              <span lang="ES-TRAD"><font color="#FFFFFF" size="2">Pl·tanos...</font></span></b><span
+              lang="ES-TRAD"><font color="#FFFFFF" size="2"> </font> </span></a></font></p>
+      <p class="MsoNormal" style="text-align: center;"><font face="Verdana"><a href="#Suena_la_sirena.">
+            <b> <span lang="ES-TRAD"><font color="#FFFFFF" size="2">Suena la
+                  sirena</font></span></b><span lang="ES-TRAD"><font color="#FFFFFF"
+                size="2">.</font></span></a><font color="#FFFFFF" size="2"><span
+              lang="ES-TRAD"> </span></font></font></p>
+      <p class="MsoNormal" style="text-align: center;"><font face="Verdana"><a href="#Mierda_y_sangre.">
+            <b> <span lang="ES-TRAD"><font color="#FFFFFF" size="2">Mierda y
+                  sangre</font></span></b><span lang="ES-TRAD"><font color="#FFFFFF"
+                size="2">.</font></span></a><font color="#FFFFFF" size="2"><span
+              lang="ES-TRAD"> </span></font></font></p>
+      <p class="MsoNormal" style="text-align: center;"><font face="Verdana"><a href="#El_puto_sabor."><b>
+              <span lang="ES-TRAD"><font color="#FFFFFF" size="2">El puto sabor</font></span></b><span
+              lang="ES-TRAD"><font color="#FFFFFF" size="2">. </font> </span></a></font></p>
+      <p class="MsoNormal" style="text-align: center;"><font face="Verdana"><a href="#En_el_culo."><b>
+              <span lang="ES-TRAD"><font color="#FFFFFF" size="2">En el culo</font></span></b><span
+              lang="ES-TRAD"><font color="#FFFFFF" size="2">. </font> </span></a></font></p>
+      <p class="MsoNormal" style="text-align: center;">&nbsp;</p>
+      <p style="text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="text-align: center;"><font color="#FFFFFF" face="Verdana">
+          <a href="#Tu_trozo_de_libertad"><b> <span lang="ES-TRAD"><font color="#FFFFFF"
+                  size="2">Tu trozo de libertad</font></span></b><span lang="ES-TRAD"><font
+                color="#FFFFFF" size="2">. </font> </span></a></font></p>
+      <p class="MsoNormal" style="text-align: center;"><font color="#FFFFFF" face="Verdana">
+          <a href="#Inseguridad_Social"><b> <span lang="ES-TRAD"><font color="#FFFFFF"
+                  size="2">Inseguridad Social</font></span></b><span lang="ES-TRAD"><font
+                color="#FFFFFF" size="2">.</font></span></a></font></p>
+      <p class="MsoNormal" style="text-align: center;"><font color="#FFFFFF" face="Verdana"><a
+            href="#Hambre."><b> <span lang="ES-TRAD"><font color="#FFFFFF" size="2">Hambre</font></span></b><span
+              lang="ES-TRAD"><font color="#FFFFFF" size="2">.</font></span></a><span
+            lang="ES-TRAD"><font size="2"> </font> </span></font></p>
+      <p class="MsoNormal" style="text-align: center;"><font color="#FFFFFF" face="Verdana"><b>
+            <span lang="ES-TRAD"> <a href="#Ser_alcalde..._"><font color="#FFFFFF"
+                  size="2">Ser alcalde...</font></a></span></b><span lang="ES-TRAD"><font
+              size="2"> </font> </span></font></p>
+      <p class="MsoNormal" style="text-align: center;"><font color="#FFFFFF" face="Verdana"><a
+            href="#Consumir."><b> <span lang="ES-TRAD"><font color="#FFFFFF" size="2">Consumir</font></span></b><span
+              lang="ES-TRAD"><font color="#FFFFFF" size="2">.</font></span></a></font></p>
+      <p class="MsoNormal" style="text-align: center;"><font color="#FFFFFF" face="Verdana">
+          <a href="#Que_se_voten_ellos"><b> <span lang="ES-TRAD"><font color="#FFFFFF"
+                  size="2">Que se voten ellos</font></span></b><span lang="ES-TRAD"><font
+                color="#FFFFFF" size="2">.</font></span></a></font></p>
+      <p class="MsoNormal" style="text-align: center;"><font color="#FFFFFF" face="Verdana">
+          <a href="#Hombre_Salvaje"><b> <span lang="ES-TRAD"><font color="#FFFFFF"
+                  size="2">Hombre Salvaje</font></span></b><span lang="ES-TRAD"><font
+                color="#FFFFFF" size="2">.</font></span></a></font></p>
+      <p class="MsoNormal" style="text-align: center;"><font color="#FFFFFF" face="Verdana"><a
+            href="#El_mangui"><b> <span lang="ES-TRAD"><font color="#FFFFFF" size="2">El
+                  mangui</font></span></b><span lang="ES-TRAD"><font color="#FFFFFF"
+                size="2">.</font></span></a></font></p>
+      <p class="MsoNormal" style="text-align: center;"><font color="#FFFFFF" face="Verdana"><a
+            href="#No_puede_ser"><b> <span lang="ES-TRAD"><font color="#FFFFFF"
+                  size="2">No puede ser</font></span></b><span lang="ES-TRAD"><font
+                color="#FFFFFF" size="2">.</font></span></a></font></p>
+      <p class="MsoNormal" style="text-align: center;"><font color="#FFFFFF" face="Verdana"><a
+            href="#Francisquillo"><b> <span lang="ES-TRAD"><font color="#FFFFFF"
+                  size="2">Francisquillo</font></span></b><span lang="ES-TRAD"><font
+                color="#FFFFFF" size="2">.</font></span></a></font></p>
+      <p class="MsoNormal" style="text-align: center;"><font color="#FFFFFF" face="Verdana"><a
+            href="#Goodway_Paco"><b> <span lang="ES-TRAD"><font color="#FFFFFF"
+                  size="2">Goodway Paco</font></span></b><span lang="ES-TRAD"><font
+                color="#FFFFFF" size="2">.</font></span></a></font></p>
+      <div style="text-align: center;"><a name="inicio10"> <font color="#FFFFFF"
+            face="Verdana"> </font></a><font color="#FFFFFF" face="Verdana"><a
+            name="Barrios_bajos0" href="#Ajedrez_mortal"><b> <span lang="ES-TRAD"><font
+                  color="#FFFFFF" size="2">Ajedrez mortal</font></span></b><span
+              lang="ES-TRAD"><font color="#FFFFFF" size="2">.</font></span></a></font><a
+          name="inicio11"></a><font color="#FFFFFF">
+          <p class="MsoBodyText"><a name="inicio11"></a><font face="Verdana"><a
+                name="NiÒo_Anarquista0" href="#Ni%F1o_Anarquista"><b><span lang="ES-TRAD">
+                    <font color="#FFFFFF" size="2">NiÒo Anarquista</font></span></b><font
+                  size="2"><span lang="ES-TRAD"><font color="#FFFFFF">.</font></span></font></a></font></p>
+        </font><a name="inicio12"> <font color="#FFFFFF"> </font></a><font color="#FFFFFF">
+          <p class="MsoBodyText" style="margin-left:0pt"><a name="inicio12"> <font
+                face="Verdana"> </font></a><font face="Verdana"><a href="#Apestados_Unidos"><b>
+                  <span lang="ES-TRAD"><font color="#FFFFFF" size="2">Apestados
+                      Unidos</font></span></b><span lang="ES-TRAD"><font color="#FFFFFF"
+                    size="2">.</font></span></a></font></p>
+        </font><a name="inicio13"> <font color="#FFFFFF"> </font></a><font color="#FFFFFF">
+          <p class="MsoBodyText"><a name="inicio13"><font face="Verdana"> </font></a><font
+              face="Verdana"><a name="JosÈ_Luis0" href="#Jos%E9_Luis"><b><span lang="ES-TRAD">
+                    <font color="#FFFFFF" size="2">JosÈ Luis</font></span></b><font
+                  size="2"><span lang="ES-TRAD"><font color="#FFFFFF">.</font></span></font></a><font
+                size="2"><span lang="ES-TRAD"> </span></font> </font></p>
+          <a name="inicio21"> <font color="#FFFFFF"> </font></a><font color="#FFFFFF">
+            <p class="MsoBodyText"><a name="inicio21"></a><font face="Verdana"><a
+                  name="El_ozono0" href="#El_ozono"><b> <span lang="ES-TRAD"> <font
+                        color="#FFFFFF" size="2">El ozono</font></span></b><font
+                    size="2"><span lang="ES-TRAD"><font color="#FFFFFF">.</font></span></font></a><font
+                  size="2"><span lang="ES-TRAD"> </span></font> </font></p>
+          </font> </font><a name="inicio14"> <font color="#FFFFFF"> </font></a><font
+          color="#FFFFFF">
+          <p class="MsoBodyText"><a name="inicio14"></a><font face="Verdana"><a
+                name="El_monstruo0" href="#El_monstruo"><b><span lang="ES-TRAD">
+                    <font color="#FFFFFF" size="2">El monstruo</font></span></b><font
+                  size="2"><span lang="ES-TRAD"><font color="#FFFFFF">.</font></span></font></a></font></p>
+        </font><a name="inicio15"> <font color="#FFFFFF"> </font></a><font color="#FFFFFF">
+          <p class="MsoBodyText"><a name="inicio15"></a><font face="Verdana"><a
+                name="SÛlo_Ûrdenes0" href="#S%F3lo_%F3rdenes"> <b><span lang="ES-TRAD">
+                    <font color="#FFFFFF" size="2">SÛlo Ûrdenes</font></span></b><font
+                  size="2"><span lang="ES-TRAD"><font color="#FFFFFF">.</font></span></font></a></font></p>
+        </font><a name="inicio16"> <font color="#FFFFFF"> </font></a><font color="#FFFFFF">
+          <p class="MsoBodyText"><a name="inicio16"></a><font face="Verdana"><a
+                name="PrÌncipe_Azul0" href="#Pr%EDncipe_Azul"><b><span lang="ES-TRAD">
+                    <font color="#FFFFFF" size="2">PrÌncipe Azul</font></span></b><font
+                  size="2"><span lang="ES-TRAD"><font color="#FFFFFF">.</font></span></font></a><font
+                size="2"><span lang="ES-TRAD"> </span></font> </font></p>
+        </font><a name="inicio17"> <font color="#FFFFFF"> </font></a><font color="#FFFFFF">
+          <p class="MsoBodyText"><a name="inicio17"></a><font face="Verdana"><a
+                name="Pide_perdÛn0" href="#Pide_perd%F3n"><b><span lang="ES-TRAD">
+                    <font color="#FFFFFF" size="2">Pide perdÛn</font></span></b><font
+                  size="2"><span lang="ES-TRAD"><font color="#FFFFFF">.</font></span></font></a></font></p>
+        </font><a name="inicio18"> <font color="#FFFFFF"> </font></a><font color="#FFFFFF">
+          <p class="MsoBodyText" style="margin-left:0pt"><a name="inicio18"> <font
+                face="Verdana"> </font></a><font face="Verdana"><a href="#El_Racismo"><b>
+                  <span lang="ES-TRAD"><font color="#FFFFFF" size="2">El Racismo</font></span></b><span
+                  lang="ES-TRAD"><font color="#FFFFFF" size="2">.</font></span></a></font></p>
+        </font></div>
+      <p style="text-align: center;"> <a name="inicio19"> </a><font color="#FFFFFF"
+          face="Verdana"><a name="Secuestro_legal0" href="#Secuestro_legal"><b><span
+                lang="ES-TRAD"> <font color="#FFFFFF" size="2">Secuestro legal</font></span></b><font
+              size="2"><span lang="ES-TRAD"><font color="#FFFFFF">.</font></span></font></a></font></p>
+      <div style="text-align: center;"><a name="inicio20"> <font color="#FFFFFF">
+          </font></a><font color="#FFFFFF">
+          <p class="MsoBodyText"><a name="inicio20"></a><font face="Verdana"><a
+                name="Apocalipsis_I0" href="#Apocalipsis_I"><b><span lang="ES-TRAD">
+                    <font color="#FFFFFF" size="2">Apocalipsis I</font></span></b><font
+                  size="2"><span lang="ES-TRAD"><font color="#FFFFFF">.</font></span></font></a><font
+                size="2"><span lang="ES-TRAD"> </span></font> </font></p>
+        </font><font face="Verdana" size="2"> <img src="imagenes/_matraka_1.jpg"
+            border="0" height="150" width="148"></font><a name="inicio4"> <font
+            face="Arial" size="1"> <img src="imagenes/_single_ivaj1.jpg" border="0"
+              height="150" width="149"></font></a><a name="inicio6"> <font face="Verdana"
+            size="2"> <img src="imagenes/_babia2.jpg" border="0" height="150" width="149"></font></a><font
+          color="#FFFFFF">
+          <p class="MsoBodyText"><font face="Verdana"><a name="Malditos_concursos0"
+                href="#Malditos_concursos"><b><span lang="ES-TRAD"> <font color="#FFFFFF"
+                      size="2">Malditos concursos</font></span></b><font size="2"><span
+                    lang="ES-TRAD"><font color="#FFFFFF">. </font></span></font></a></font></p>
+        </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font color="#FFFFFF"><font
+            face="Verdana"><a name="La_fiesta0" href="#La_fiesta"><b> <span lang="ES-TRAD">
+                  <font color="#FFFFFF" size="2">La fiesta</font></span></b><span
+                lang="ES-TRAD"><font color="#FFFFFF" size="2">.</font></span></a></font></font></p>
+      <p style="text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><a name="inicio"> </a><a name="inicio5">
+        </a></div>
+      <p class="MsoBodyText" style="text-align: center;"><a name="inicio5"></a><font
+          color="#FFFFFF" face="Verdana"><a href="#Barrios_bajos"><b><span lang="ES-TRAD">
+                <font color="#FFFFFF" size="2">Barrios bajos</font></span></b><font
+              size="2"><span lang="ES-TRAD"><font color="#FFFFFF">.</font></span></font></a></font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font color="#FFFFFF" face="Verdana"><a
+            href="#Apocalipsis_II"><b><span lang="ES-TRAD"> <font color="#FFFFFF"
+                  size="2">Apocalipsis II</font></span></b><font size="2"><span
+                lang="ES-TRAD"><font color="#FFFFFF">.</font></span></font></a></font></p>
+      <p style="text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><a href="#Huelga_de_hambre"><b><font color="#FFFFFF"
+              face="Verdana" size="2">H</font></b></a><font color="#FFFFFF" face="Verdana"><b><font
+              color="#FFFFFF"><a href="#Huelga_de_hambre"><font color="#FFFFFF"
+                  size="2"><span lang="ES-TRAD">u</span>elga de h<span lang="ES-TRAD">ambre</span></font></a></font></b><a
+            href="#Huelga_de_hambre"><font color="#FFFFFF" size="2"><span lang="ES-TRAD">.</span></font></a><a
+            href="#Huelga_de_hambre"><font color="#FFFFFF" size="2"> (DIRECTO)</font></a></font></div>
+      <p style="text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><a name="inicio"> <font face="Verdana" size="2">
+            <img src="imagenes/_gallinero1.jpg" border="0" height="149" width="150"></font></a><a
+          name="inicio8"> <font face="Verdana" size="2"> <img src="imagenes/RAREZAS.jpg"
+              border="0" height="149" width="150"></font></a> &nbsp; <a name="inicio">
+          <font color="#FFFFFF" face="Verdana"> </font></a><font color="#FFFFFF"
+          face="Verdana"><a name="Nada_sabr·s0" href="#Nada_sabr%E1s"><b> <span
+                lang="ES-TRAD"><font color="#FFFFFF" size="2">Nada sabr·s</font></span></b><span
+              lang="ES-TRAD"><font color="#FFFFFF" size="2">.</font></span></a></font>&nbsp;
+        <a name="inicio9"> <font color="#FFFFFF"> </font></a></div>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"><a name="inicio9">
+          <font color="#FFFFFF"> </font></a><font color="#FFFFFF"><font face="Verdana"><a
+              href="#Ulcera."><b> <span lang="ES-TRAD"><font color="#FFFFFF" size="2">Ulcera</font></span></b><span
+                lang="ES-TRAD"><font color="#FFFFFF" size="2">.</font></span></a></font></font></p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoBodyText"><font face="Verdana"><a name="Intro0" href="#Intro"><b>
+                  <span lang="ES-TRAD"> <font color="#FFFFFF" size="2">Intro</font></span></b><font
+                  size="2"><span lang="ES-TRAD"><font color="#FFFFFF">.</font></span></font></a></font></p>
+          <p class="MsoBodyText"><font face="Verdana"><a name="No_puedes_m·s0" href="#No_puedes_m%E1s"><b><span
+                    lang="ES-TRAD"> <font color="#FFFFFF" size="2">No puedes
+                      m·s</font></span></b><font size="2"><span lang="ES-TRAD"><font
+                      color="#FFFFFF">.</font></span></font></a></font></p>
+        </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font color="#FFFFFF"><font
+            face="Verdana"><a name="El_Nani0" href="#El_Nani"><b><span lang="ES-TRAD">
+                  <font color="#FFFFFF" size="2">El Nani</font></span></b><span
+                lang="ES-TRAD"><font color="#FFFFFF" size="2">.</font></span></a></font></font></p>
+      <div style="text-align: center;"> &nbsp; </div>
+      <p style="text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"> &nbsp; <a name="inicio">
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+        </a></div>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><a name="inicio">
+        </a><a name="1™_KomuniÛn._"><b><font color="#FF0000" face="Verdana" size="2">Primera</font></b></a><font
+          face="Verdana"><a name="1™_KomuniÛn._"><font color="#FF0000"><b><span
+                  lang="ES-TRAD"><font size="2"> KomuniÛn</font></span></b></font><span
+              lang="ES-TRAD"><font color="#FF0000"><b><font size="2">.</font></b></font></span></a><b><font
+              color="#FFFFFF" size="1"><a name="1™_KomuniÛn._"> </a><span lang="ES-TRAD">Letra
+                y m˙sica <i>1™ K</i>. (De la maqueta ìTour í89î)</span>&nbsp;</font></b></font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Yo tenÌa 9 aÒos,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">y como no, iba a un colegio de Hermanos.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Me enseÒaron todos los pecados capitales,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">pero no me dijeron ninguna de las mayores
+          verdades.</font></p>
+      <p class="MsoNormal" style="text-align: center;"> <font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Por un sucio sacramento</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Una iglesia llena de niÒos,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">todos vestiditos iguales.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Dinero gastado en vano;</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">El viejo sin un duro en los bolsillos.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">(Abre el bolsillo y cierra la boca)</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Por un sucio sacramento</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana"> <b> <span lang="ES-TRAD"><font color="#FF0000" size="2"><a
+                  name="Ir·n_-_Iraq">Ir·n - Iraq</a></font></span></b><span lang="ES-TRAD"><font
+              size="1"><b><font color="#FF0000">.</font><font color="#FFFFFF">
+                  Letra: <i>J.Gallardo</i>, <i>A. DÌaz</i>. M˙sica: <i>L.
+                    Solaz</i>. (De la maqueta ìTour í89î)</font></b></font></span></font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Ir·n, Iraq. Ir·n, Iraq. Ir·n, Iraq...
+          PetrÛleo.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Ir·n, Iraq. Ir·n, Iraq. Ir·n, Iraq... Agobio.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Ir·n, Iraq. Ir·n, Iraq. Ir·n, Iraq...
+          ReligiÛn.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Ir·n, Iraq. Ir·n, Iraq. Ir·n, Iraq...
+          MaldiciÛn.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Ir·n, Iraq. Ir·n, Iraq. Ir·n, Iraq... Armas.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Ir·n, Iraq. Ir·n, Iraq. Ir·n, Iraq... Almas.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">(Yeah... Penyagolosa)</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana"> <font color="#FF0000"><b> <span lang="ES-TRAD"><font
+                  size="2"><a name="Soldadito_EspaÒol">Soldadito EspaÒol</a></font></span></b></font><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">.</font></b></font><b><font
+                color="#FFFFFF" size="1"> Letra: <i>A. DÌaz</i>. M˙sica: <i>1™
+                  K.</i> (De la maqueta ìTour í89î)</font></b></span></font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">PasÈ un aÒo entero,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">oprimido por negreros.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Estrellas y galones,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">me tocaron los cojones.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Las pelotas en la puerta,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; me dijeron al entrar.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; AquÌ har·s lo que te digan.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Y la boca cerrar·s!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Me llevaron a la Jura...</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Y para colmo habÌa un cura.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">EjÈrcito y clero,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">se reparten el dinero.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Esto pronto se va a acabar.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Esto pronto terminar·.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Por su Patria y su bandera</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">mi sangre no correr·!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana"> <font color="#FF0000"><b> <span lang="ES-TRAD"><font
+                  size="2"><a name="Si_fuera_Dios">Si fuera Dios</a></font></span></b></font><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">. </font> </b></font><b><font
+                color="#FFFFFF" size="1">Letra<i>: J. Gallardo</i>. M˙sica: <i>P.
+                  Tom·s</i>. (De la maqueta ìTour í89î)</font></b></span></font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Si yo pudiera ser Dios, curarÌa a los
+          enfermos,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">pero como no lo soy, escupo a los necios.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Si yo pudiera ser Dios, no trabajarÌa jam·s,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">pero como no lo soy, hago currar a los dem·s.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Padre Nuestro, (Nuestro
+          SeÒor)</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Padre Nuestro,
+          (Santificado)</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Si yo pudiera ser Dios, harÌa ver a los
+          ciegos,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">pero como no lo soy, tapo los ojos con dinero.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Si yo pudiera adivinar el futuro... no se lo
+          dirÌa a nadie</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">si yo pudiera ser Dios... °Ay madre!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Padre Nuestro, (Nuestro
+          SeÒor)</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Padre Nuestro,
+          (Santificado)</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana"> <b> <a name="Pl·tanos..._"> <span lang="ES-TRAD"><font
+                  color="#FF0000" size="2">Pl·tanos...</font></span><font size="1">
+              </font></a><font color="#FFFFFF" size="1"><span lang="ES-TRAD">Letra:
+                <i>A. DÌaz</i>. M˙sica: <i>L. Solaz</i>. (De la maqueta ìTour
+                í89î)</span></font></b></font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          color="#FFFFFF" face="Verdana" size="1"><span lang="ES-TRAD"> <object
+              classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab"
+              height="20" width="25"> <param name="movie" value="http://www.1akomunion.es/audio/singlemp3player.swf?file=http://www.1akomunion.es/audio/cd1/Track05.mp3&amp;backColor=990000&amp;frontColor=ddddff&amp;repeatPlay=false&amp;songVolume=90">
+              <param name="wmode" value="transparent"> </object> </span> </font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Cientos de monos controlan las calles,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">cientos de monos te quieren aplastar.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Cientos de monos con uniforme,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">mierda de monos, os vamos a matar!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Pl·tanos... pa los monos.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Pl·tanos... os vamos a dar.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Sois una raza en extinciÛn</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">sin vuestras pistolas no hay valor.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Nosotros aguantamos todo el mogollÛn.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Perros de mierda, morirÈis sin honor.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Pl·tanos... pa los monos.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Pl·tanos... os vamos a dar.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Monos. Quiero monos muertos,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">muertos para abonar los huertos.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Hijos de puta, orden y ley.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Fachas de mierda, pronto morirÈis.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Pl·tanos... pa los monos.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Pl·tanos... os vamos a dar.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana"> <font color="#FF0000"><a name="Suena_la_sirena."><b>
+                <span lang="ES-TRAD"><font size="2">Suena la sirena</font></span><font
+                  size="2"><span lang="ES-TRAD">.</span></font></b></a></font><span
+            lang="ES-TRAD"><b><font color="#FF0000" size="2"> </font> <font color="#FFFFFF"
+                size="1">Letra: <i>J, Gallardo</i>, M˙sica: <i>L. Solaz</i>.
+                (De la maqueta ìTour í89î)</font></b></span></font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Suena, siempre suena, la puta sirena.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Son las ocho en punto... °Hay que trabajar!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">El jefe te grita, ya no aguantas m·s.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Basta ya de historias, °Vas a reventar!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Tu eres el explotado,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; tu est·s muy mal pagado.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Tu sangre est·s vomitando,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; morir·s como un esclavo.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Han dado las seis, te quieres pirar.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Por hoy ya es bastante... °MaÒana ser· igual!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Suena, siempre suena, la puta sirena.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Son las ocho en punto... °Hay que trabajar!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Tu eres el explotado,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; tu est·s muy mal pagado.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Tu sangre est·s vomitando,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; morir·s como un esclavo.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana"> <font color="#FF0000"><a name="Mierda_y_sangre."><b>
+                <span lang="ES-TRAD"><font size="2">Mierda y sangre</font></span><font
+                  size="2"><span lang="ES-TRAD">.</span></font></b></a></font><b><font
+              color="#FFFFFF" size="1"><span lang="ES-TRAD"> Letra: <i>J.Gallardo</i></span><i>,
+                CÈsar Gasch</i><span lang="ES-TRAD">. M˙sica: Adaptada. (De la
+                maqueta ìTour í89î)</span></font></b></font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">No hay m·s noble animal, que el toro Nacional.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Si te portas mal, con la daga acabar·s,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">y por culo te dar·n, en la fiesta
+          Nazi-nacional.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °Mierda y Sangre!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana"> <font color="#FF0000"><a name="El_puto_sabor."><b> <span
+                  lang="ES-TRAD"><font size="2">El puto sabor</font></span><font
+                  size="2"><span lang="ES-TRAD">.</span></font></b></a></font><b><font
+              color="#FFFFFF"><span lang="ES-TRAD"><font size="1"> Letra: <i>A.DÌaz</i>,
+                  <i>J. Gallardo</i>.M˙sica: <i>P. Tom·s</i>. (De la maqueta
+                  ìTour í89î)</font></span></font></b></font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Quiero comer Fritos,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">a ver si los vomito.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Si tu est·s a mi lado</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">ver·s lo que es...</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; El puto, el puto, el puto
+          sabor.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; El puto, el puto, el puto
+          sabor...</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Americano. Americano.
+          Americano. A - me - ricano.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Entra en la tienda. Elige la bolsita.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Come deprisita pa que te siente mal.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; El puto, el puto, el puto
+          sabor.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; El puto, el puto, el puto
+          sabor...</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Americano. Americano.
+          Americano. A - me - ricano.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Ahora est·s enfermo, te retuerces en la cama.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Tu vieja como loca busca un mÈdico de guardia.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; El puto, el puto, el puto
+          sabor.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; El puto, el puto, el puto
+          sabor...</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Americano. Americano.
+          Americano. A - me - ricano.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Ya no hay soluciÛn. Eres una rata m·s.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Contigo han probado el nuevo material</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; El puto, el puto, el puto
+          sabor.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; El puto, el puto, el puto
+          sabor...</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Americano. Americano.
+          Americano. A - me - ricano.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana"> <font color="#FF0000"><a name="En_el_culo."><b> <span
+                  lang="ES-TRAD"><font size="2">En el culo</font></span><font size="2"><span
+                    lang="ES-TRAD">.</span></font></b></a></font><span lang="ES-TRAD"><font
+              color="#FF0000"><b><font size="2"> </font> </b></font><b><font color="#FFFFFF"
+                size="1">Letra: <i>J. Gallardo</i></font></b></span><b><font color="#FFFFFF"
+              size="1"><i>, CÈsar Gasch</i><span lang="ES-TRAD">.
+                M˙sica:Adaptada. (De la maqueta ìTour í89î)</span></font></b></font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; He intentado un suicidio,
+          un suicidio por amor.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Ahora tengo mucho miedo, y en el culo °un
+          cagallÛn!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Los niÒatos, los moÒatos,
+          los que bailan tecno-pop,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">ahora tienen mucho miedo, y en el culo °un
+          cagallÛn!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Los Hermanos de la Salle
+          son m·s buenos que el copÛn,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Los Hermanos de la Salle, °que nos llevan de
+          excursiÛn!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Los Hermanos de la Salle son m·s buenos que el
+          copÛn,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Los Hermanos de la Salle, y en el culo °un
+          cagallÛn!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana"> <font color="#FF0000"> <b> <a name="Ulcera."> <span
+                  lang="ES-TRAD"><font size="2">Ulcera</font></span><font size="2"><span
+                    lang="ES-TRAD">.</span></font></a><font size="2"> </font></b></font><b><font
+              color="#FFFFFF"><span lang="ES-TRAD"><font size="1">Letra: <i>J.
+                    Gallardo</i>. M˙sica: Adaptada. (InÈdita.)</font></span></font></b></font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Entro en el bar, y no puedo aguantar</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">el beber cerveza o beber pachar·n.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Pido que me pongan algo de privar.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Pido que me pongan °Lo que sea ya!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °Ahhhh me da el ardor.
+          Joder quÈ mal.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Podrida ˙lcera
+          gastroduodenal.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Me tomo por un tubo el prinper·n.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Y anti·cidos no me quedan ya.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">No puedo privar m·s. No puedo privar m·s.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Solo puedo ingerir... °Agua mineral!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana"> <font color="#FF0000"><b> <span lang="ES-TRAD"><font
+                  size="2"><a name="Tu_trozo_de_libertad">Tu trozo de libertad</a></font></span></b></font><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">.</font></b></font><b><font
+                color="#FFFFFF" size="1"> Letra: <i>J. Gallardo</i>. M˙sica: <i>1™
+                  K.</i> (Del LP ì1™ KomuniÛnî)</font></b></span></font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Sales de tu casa. cosa rara en tÌ,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">buscas algo nuevo, quieres olvidar.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Tratas de perder de vista la ciudad</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">si eso quieres. si eso quieres de verdad.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Corre como un loco hacia el disco-bar,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">ahÌ est· tu trozo de libertad,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Tu colega ha pillao, y ya est· volando.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">øCÛmo es?. øQuÈ se siente all· arriba
+          flotando?</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Son varias horas de viaje a ning˙n sitio.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Son sensaciones que nunca has conocido.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Aureolas de colores, picores en la piel,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">risas en la boca, te sentir·s bien.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Vuelves a este mundo tan aburrido.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">°Para quÈ tanta historia!.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">?De quÈ coÒo ha servido?</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana"> <font color="#FF0000"><b> <span lang="ES-TRAD"><font
+                  size="2"><a name="Inseguridad_Social">Inseguridad Social</a></font></span></b></font><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">. </font> </b></font><b><font
+                color="#FFFFFF" size="1">Letra: <i>J. Gallardo</i>. M˙sica: <i>L.
+                  Solaz</i>. (Del LP ì1™ KomuniÛnî)</font></b></span></font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">°Vaya asistencia sanitaria</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">que recibimos!.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">°CÛmo nos chupan la sangre</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">esos vampiros!.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Te pasas sesenta y cinco</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">cotizando, cotizando.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">°Cu·nta pasta malgastada!,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Para nada, para nada.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Vas al mÈdico</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">por un simple constipao,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">y acabas con el estÛmago</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">casi destrozao.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Si confÌas en tu mÈdico</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">est·s perdido, est·s perdido.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Y si vas de chico bueno,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">no te digo, no te digo.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Ojala no caigas nunca</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">malo en la cama,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">m·s vale que sigas sano</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">como una manzana.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Si te rompes algo </font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">te costar· mucho arreglarlo.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">No preguntes que ha pasado,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">nadie sabr· explicarlo.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana"> <font color="#FF0000"><a name="Hambre."><b> <span lang="ES-TRAD"><font
+                    size="2">Hambre</font></span><font size="2"><span lang="ES-TRAD">.</span></font></b></a></font><span
+            lang="ES-TRAD"><font color="#FF0000" size="2"><b> </b></font><b><font
+                color="#FFFFFF" size="1"> Letra: <i>A. DÌaz</i>. M˙sica: <i>P.
+                  Tom·s, L. Solaz</i>. (Del LP ì1™ KomuniÛnî)</font></b></span></font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Hay mucha hambre en el mundo</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">pero tu poco puedes hacer.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Siguen habiendo guerras en el mundo,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">pero la humanidad debe perecer.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Los que gobiernan siguen engordando</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">y a sus ejÈrcitos quieren engrandecer.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Jodidos carroÒeros</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; una limosna, por favor.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Repartid vuestro dinero</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; y todo ir· mejor.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">El Vaticano tiene muchos tesoros.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">y el Papa es muy bueno con sus fieles.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">En EtiopÌa los entierran a todos.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">°Woitila, reparte tus bienes!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Ves como mueren los negritos,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">pero tu sigues ahÌ con tus rollizos
+          michelines.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; DÛlares y armas</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; para la paz mundial.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; El Vaticano... </font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °esta multinacional!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Hay mucha hambre en el mundo.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana"> <font color="#FF0000"><a name="Ser_alcalde..._"><b> <span
+                  lang="ES-TRAD"><font size="2">Ser alcalde...</font></span><font
+                  size="2"><span lang="ES-TRAD"> </span> </font></b></a></font>
+          <b> <font color="#FFFFFF"><span lang="ES-TRAD"><font size="1"> Letra:
+                  <i>A. DÌaz</i>. M˙sica: <i>P. Tom·s</i>. (Del LP ì1™
+                  KomuniÛnî)</font></span></font></b></font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Hace varios aÒos que nacÌ,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">y algunos menos que empecÈ a pensar.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Siempre forjando mi porvenir,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">y para comer tendrÈ que sudar.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Yo soy pobre, ilustrÌsimo
+          alcalde.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Yo soy pobre, y tu vives de
+          balde.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Nadie es profeta en su tierra,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">pero la polÌtica la puso en tu poder.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Has sabido robar la guita,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">asÌ lo demuestra tu American-Express.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Yo soy pobre, ilustrÌsimo
+          alcalde.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Yo soy pobre, y tu vives de
+          balde.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">T˙ tranquilo y sigue chupando,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">los impuestos te dar·n de comer.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Nosotros seguiremos currando,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">pero t˙ y tu partido no dej·is de joder.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Yo soy pobre, ilustrÌsimo
+          alcalde.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Yo soy pobre, y tu vives de
+          balde.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana"> <font color="#FF0000"><a name="Consumir."><b> <span
+                  lang="ES-TRAD"><font size="2">Consumir</font></span><font size="2"><span
+                    lang="ES-TRAD">.</span></font></b></a></font><span lang="ES-TRAD"><font
+              color="#FF0000"><b><font size="2"> </font> </b></font><b><font color="#FFFFFF"
+                size="1"> Letra: <i>J. Gallardo</i>. M˙sica: <i>P. Tom·s</i>.
+                (Del LP ì1™ KomuniÛnî)</font></b></span></font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Un consejo publicitario</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">para arreglar tu vida.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Una imagen engaÒosa</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">que no muestra lo que es.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">øQuiÈn se empeÒa en decirnos</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">lo que hay que consumir?</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °Consumir!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Anuncios televisivos</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">para ingenuos mirones,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">el dÌa de tu cumpleaÒos</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">una caja de bombones.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">øQuiÈn destroza nuestros ojos</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">con la chispa de la vida?</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °Consumir!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Amigo no escapar·s</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">las arrugas pronto saldr·n.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Tenemos la crema ideal</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">que te las quitar·.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">øQuiÈn se empeÒa en decirnos</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">lo que hay que consumir?</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °Consumir!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FF0000"> </font></div>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b> <span lang="ES-TRAD"><font size="2"><a name="Que_se_voten_ellos">Que
+                    se voten ellos</a></font></span></b></font></font><font face="Verdana"><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">. </font> </b></font>
+            <b> <font color="#FFFFFF" size="1">Letra: <i>J. Gallardo</i>.
+                M˙sica: <i>1™ K</i>. (Del LP ì1™ KomuniÛnî)</font></b></span></font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Reproch·is lo que yo hago.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">No os consiento las mentiras.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Soy un chico muy impaciente,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">pero siempre algo prudente.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">No sabÈis lo que hacer</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">para comprar mi voto.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Mi voto no est· en venta.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">°Mi voto no est· en venta!.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °Que se voten ellos!,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; yo no conozco a ninguno.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">PodÈis votaros entre vosotros,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">podÈis seguir chupando del bote,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">podÈis seguir comiÈndome el tarro,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">pero yo me cago en vosotros.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Por favor no m·s engaÒos,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">por favor no m·s mentiras.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Estamos ya medio muertos...</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Y a˙n os quedan varios aÒos</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °Que se voten ellos!,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; yo no conozco a ninguno.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FF0000"> </font></div>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b> <span lang="ES-TRAD"><font size="2"><a name="Hombre_Salvaje">Hombre
+                    Salvaje</a></font></span></b></font></font><font face="Verdana"><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">. </font> </b></font>
+            <b> <font color="#FFFFFF" size="1">Letra: <i>J. Gallardo</i>.
+                M˙sica: <i>P. Tom·s</i>. (Del LP ì1™ KomuniÛnî)</font></b></span></font></p>
+      <div style="text-align: center;"><font color="#FFFFFF"> </font></div>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Soy un hombre salvaje,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">capaz de matar para comer.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Soy un hombre salvaje,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">dispuesto a vivir de los dem·s.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Destrozo las vidas con papel de Estado.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Amo los negocios. Amo tu dinero.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °No renunciarÈ a este
+          juego!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">CaerÈ sobre tu cuenta corriente</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">como un lobo va por su presa.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Me mente necesita alimento,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">mi bolsillo quiere dinero...</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °No renunciarÈ a este
+          juego!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">No dejarÈ que se extinga mi raza,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">mi semilla germinar· en el mundo.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Mis hijos ser·n maestros,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">y todos vosotros, alumnos.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °No renunciarÈ a este
+          juego!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °No se acaba aquÌ este
+          juego!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; </font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FF0000"> </font></div>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b> <span lang="ES-TRAD"><font size="2"><a name="El_mangui">El
+                    mangui</a></font></span></b></font></font><font face="Verdana"><span
+            lang="ES-TRAD"><font color="#FF0000" size="2"><b>.</b></font><b><font
+                color="#FFFFFF" size="1"> Letra: <i>J. Gallardo</i>. M˙sica: <i>P.
+                  Tom·s</i>. (Del LP ì1™ KomuniÛnî)</font></b></span></font></p>
+      <div style="text-align: center;"><font color="#FFFFFF"> </font></div>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">No llegar·s</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">a ser nunca tu mismo.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Te arrimar·s</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">al sol que m·s calienta.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Caminar·s</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">como una marioneta.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; øQuÈ es lo que te falta?</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; øQuÈ es lo que nunca has
+          tenido?.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Eres persona o... øJam·s
+          has vivido?</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Vas de legal</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">pero se te ve el plumero.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">SerÌas amigo</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">si la amistad diese dinero.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">No cambiar·s</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Ser·s el bobo de siempre.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; øQuÈ es lo que te falta?</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; øQuÈ es lo que nunca has
+          tenido?.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoNormal" style="margin-left:0pt" align="right">&nbsp;</p>
+        </font><font color="#FF0000"> </font></div>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b> <span lang="ES-TRAD"><font size="2"><a name="No_puede_ser">No
+                    puede ser</a></font></span></b></font></font><font face="Verdana"><span
+            lang="ES-TRAD"><font color="#FF0000" size="2"><b>. </b></font><b><font
+                color="#FFFFFF" size="1">Letra y m˙sica: <i>P. Tom·s</i>. (Del
+                LP ì1™ KomuniÛnî)</font></b></span></font></p>
+      <div style="text-align: center;"><font color="#FFFFFF"> </font></div>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Amos del mundo</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">dueÒos por doquier.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">SueÒos de grandeza,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">y siempre el poder.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; No puede ser,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; nada es verdad,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; ni un solo deseo</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; se realizar·.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Mentiras disfrazadas</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">en bellos rituales.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Gentes acobardadas</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">fingen vivir bien.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; No puede ser,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; nada es verdad,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; ni un solo deseo</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; se realizar·.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Trabajas dÌa y noche</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">para poder vivir,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">esclavo de un sistema...</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Nunca pienses en ceder</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; No puede ser,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; nada es verdad,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; ni un solo deseo</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; se realizar·.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoNormal" style="margin-left:0pt" align="right">&nbsp;</p>
+        </font><font color="#FF0000"> </font></div>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b> <span lang="ES-TRAD"><font size="2"><a name="Francisquillo">Francisquillo</a></font></span></b></font></font><font
+          face="Verdana"><span lang="ES-TRAD"><font color="#FF0000" size="2"><b>.</b></font><b><font
+                color="#FFFFFF" size="1"> Letra: <i>J. Gallardo</i>. M˙sica: <i>A.
+                  DÌaz, P. Tom·s</i>. (Del LP ì1™ KomuniÛnî)</font></b></span></font></p>
+      <div style="text-align: center;"><font color="#FFFFFF"> </font></div>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Yo siempre quise ser</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">uno de esos listillos,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">que a los 20 se hacen de oro,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">y poco despuÈs °Viva Cristo!.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">No se bien como se hace,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">pero lo intento dÌa a dÌa.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Hace falta mucha suerte,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">y un padrino que te diga:</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °Firma aquÌ, vete
+          tranquilo!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Tu pellejo est· a salvo,
+          -tu mujer conmigo-.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">No me ha salido bien la historia,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Otra vez me he dado de morros.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Voy a comprarme una espada,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">y un capote pa los toros.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °Firma aquÌ, vete
+          tranquilo!</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Tu pellejo est· a salvo,
+          -tu mujer conmigo-.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoNormal" style="margin-left:0pt" align="right">&nbsp;</p>
+        </font><font color="#FF0000"> </font></div>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b> <span lang="ES-TRAD"><font size="2"><a name="Goodway_Paco">Goodway
+                    Paco</a></font></span></b></font></font><font face="Verdana"><span
+            lang="ES-TRAD"><font color="#FF0000" size="2"><b>.</b></font><b><font
+                color="#FFFFFF" size="1"> Letra: <i>J. Gallardo</i>. M˙sica: <i>L.
+                  Solaz</i>. (Del LP ì1™ KomuniÛnî)</font></b></span></font></p>
+      <div style="text-align: center;"><font color="#FFFFFF"> </font></div>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Cuarenta largos aÒos</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">explotando a la naciÛn.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Cuarenta largos aÒos</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">aplastados por un cabrÛn.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Jodistes a los nuestros</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">en tu puto paredÛn,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">con tu sucia dictadura</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">y tu af·n de destrucciÛn.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Cerdo fascista, puto
+          dictador.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Roja es la sangre, muerto
+          est·s mejor.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Te las dabas de valiente,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">pues t˙ eras el mejor.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Manejabas a tu antojo</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">los hilos del terror.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">EspaÒa era tu causa,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">y EspaÒa te olvidÛ.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Pero tus vasallos,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">a˙n te invocan con devociÛn.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Cerdo fascista, puto
+          dictador.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Roja es la sangre, muerto
+          est·s mejor.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoNormal" style="margin-left:0pt" align="right">&nbsp;</p>
+        </font><font color="#FF0000"> </font></div>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b> <span lang="ES-TRAD"><font size="2"><a name="Nada_sabr·s">Nada
+                    sabr·s</a></font></span></b></font></font><font face="Verdana"><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">.</font></b></font><b><font
+                color="#FFFFFF" size="1"> Letra: <i>J. Gallardo</i>. M˙sica: <i>1™
+                  K</i>. (Del EP ìEl gallinero elÈctricoî)</font></b></span></font></p>
+      <div style="text-align: center;"><font color="#FFFFFF"> </font></div>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">QuÈ podemos hacer contra todo,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">quÈ necesitamos para vivir en paz.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Cuentas veces nos tienen que decir</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">que esto no se puede arreglar.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Si intentas saberlo todo,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; nada, pero nada sabr·s.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Dale un sentido a la vida,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">vivir de espaldas a la realidad.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">El estado, el capital y Dios</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">cierran los ojos de dos en dos.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Si intentas saberlo todo,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; nada, pero nada sabr·s.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Con nosotros no podr·n,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">las bocas no se pueden cerrar.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">DÛnde est· la libertad,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">que tanto oigo pregonar.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Si intentas saberlo todo,</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; nada, pero nada sabr·s.</font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FF0000"> </font></div>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"><font
+          color="#FF0000"> <font face="Verdana"><b> <span lang="ES-TRAD"><font
+                  size="2"><a name="Apestados_Unidos">Apestados Unidos</a></font></span></b></font></font><font
+          face="Verdana"><span lang="ES-TRAD"><font color="#FF0000"><b><font size="2">.</font></b></font><b><font
+                color="#FFFFFF" size="1"> Letra: </font></b></span><b><font color="#FFFFFF"
+              size="1"><i>J. Gallardo</i><span lang="ES-TRAD">. M˙sica: <i>1™
+                  K.</i> </span> </font></b></font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;">&nbsp;
+        </p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">CÛmo est·n las cosas en SudamÈrica,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">quÈ mal lo llevan nuestros hermanos.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Est·is jodiendo su cultura,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">con vuestras ganas de conquistarlo todo.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °Vaya una gracia les debe
+          hacer</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; ver allÌ en la tele a Bush
+          aparecer!</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Con vuestras balas dais mensajes de paz,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">en vez de ayudar un poquito m·s.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">ConseguirÈis vuestro propÛsito,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">sois los m·s fuertes sin lugar a dudas.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °Vaya una gracia les debe
+          hacer</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; ver allÌ en la tele a Bush
+          aparecer!</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">PorquÈ no dej·is de hacer el bobo,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">no veis que la gente no es idiota.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">PodrÌais pensarlo bien,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">antes de que os partan la boca.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °Vaya una gracia les debe
+          hacer</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; ver allÌ en la tele a Bush
+          aparecer!</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FF0000"> </font></div>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"><font
+          color="#FF0000"> <font face="Verdana"><b> <span lang="ES-TRAD"><font
+                  size="2"><a name="El_Racismo">El Racismo</a></font></span></b></font></font><font
+          face="Verdana"><span lang="ES-TRAD"><b><font color="#FF0000" size="2">.</font><font
+                color="#FFFFFF" size="1"> Letra: <i>A. DÌaz</i>. M˙sica: <i>1™
+                  K.</i></font></b></span></font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;">&nbsp;
+        </p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Os molestaba el color de su piel,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">no era razÛn para esclavizarlos.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Hacerlos currar no estaba bien,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">pero faltaba sangre para regocijaros.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Campos de algodÛn, c·maras
+          de gas,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; hornos crematorios, øEres
+          blanco?, vivir·s.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">JudÌos, gitanos, rojos y dem·s,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">los exterminabais&nbsp; revueltos en gas.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Hubieron algunos que tuvieron mucha suerte,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">fueron el proyecto de una raza fuerte.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Campos de algodÛn, c·maras
+          de gas,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; hornos crematorios, øEres
+          blanco?, vivir·s.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Hay que ver lo tercermundistas que somos,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">si no somos personas, øquÈ seremos?</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Negros, amarillos o a cuadros,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">no es razÛn para humillarlos.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">HabÈis visto el agujero de vuestro culo,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">tambiÈn es negro y no os quej·is.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Basta de racismo, racismo ridÌculo,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">porque conmigo nunca colarÈis.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Campos de algodÛn, c·maras
+          de gas,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; hornos crematorios, øEres
+          blanco?, vivir·s.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoBodyText" style="margin-left:0pt" align="right">&nbsp;</p>
+        </font><font color="#FF0000"> </font></div>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"><font
+          color="#FF0000"> <font face="Verdana"><b> <span lang="ES-TRAD"><font
+                  size="2"><a name="Ajedrez_mortal">Ajedrez mortal</a></font></span></b></font></font><font
+          face="Verdana"><span lang="ES-TRAD"><font color="#FF0000" size="2"><b>.
+              </b></font> <b> <font color="#FFFFFF" size="1"> Letra: <i>A.
+                  DÌaz</i>. M˙sica: <i>1™ K</i>.</font></b></span></font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;">&nbsp;
+        </p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Es muy triste ver</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">como los amigos se van,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">atrapados en un juego</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">en el que vence el rival.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">El tablero el muy pequeÒo,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">seguro te cojer·n.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">En este maldito juego</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">el caballo es tu rival.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; No empieces la partida,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; no seas mamÛn.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Las reglas son muy
+          claras...</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °Caballo tumba al peÛn!</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Primero uno a la semana,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">despuÈs ser·n tres.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Haciendo horas extras,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">a˙n lo llevar·s bien.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Dejas el trabajo,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">todo te sale al revÈs.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">El fin est· muy prÛximo,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">ya no sabes quiÈn es quiÈn.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; No empieces la partida,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; no seas mamÛn.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Las reglas son muy
+          claras...</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °Caballo tumba al peÛn!</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Metido hasta el cuello</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">las deudas te agobiar·n.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Por esta razÛn,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">los dientes perder·s.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">Los colegas no son ricos,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">poco te ayudar·n.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">El caballo siempre gana</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">es este puto ajedrez.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; No empieces la partida,</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; no seas mamÛn.</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; Las reglas son muy
+          claras...</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;"> <font
+          face="Verdana" size="1">&nbsp;&nbsp;&nbsp; °Caballo tumba al peÛn!</font></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoBodyText" style="margin-left: 0pt; text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoBodyText" style="margin-left:0pt" align="right">&nbsp;</p>
+        </font><font color="#FF0000"> </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b><span lang="ES-TRAD"> <font size="2"><a name="Barrios_bajos">Barrios
+                    bajos</a></font></span></b></font></font><font face="Verdana"><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">.</font></b></font><b><font
+                color="#FFFFFF" size="1"> Letra <i>J. Gallardo</i>. M˙sica: <i>P.
+                  Tom·s, L. Solaz</i>. ( Del single producido por el IVAJ.)</font></b></span></font></p>
+      <div style="text-align: center;"><font color="#FFFFFF"> </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Barrios
+          bajos, sucias calles,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">miedo
+          en los ojos, corre y no pares.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">El
+          te ha visto pisar su zona,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">frente
+          a la cara, frÌa la hoja.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Barrios bajos, ten cuidado</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Mam·
+          lo dijo: ten cuidado,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">hay
+          peligro. Barrios bajos.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Limpia
+          el filo como si nada,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">y
+          en otra esquina, luce su cara.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Barrios bajos, ten cuidado</font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoBodyText" align="right">&nbsp;</p>
+        </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana"><b><span
+              lang="ES-TRAD"> <font color="#FF0000" size="2"><a name="Apocalipsis_II">Apocalipsis
+                  II</a></font></span></b></font><b><font face="Verdana"><span lang="ES-TRAD"><font
+                size="1"><font color="#FF0000">.</font><font color="#FFFFFF">
+                  Letra: <i>J. Gallardo</i>. M˙sica: <i>P. Tom·s</i>. ( Del
+                  single producido por el IVAJ.)</font></font></span></font></b></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Buenos
+          dÌas, radio-escuchas.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Os
+          saluda Lorenzo MartÌn.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Abrid
+          bien vuestros oÌdos,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">y
+          escuchad lo que os voy a decir.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Los
+          titulares de la prensa</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">me
+          han daÒado el corazÛn,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">no
+          hay ni una buena noticia,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">y
+          encima amanece sin sol.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Hoy
+          la policÌa ha incautado</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">dos
+          mil kilos de hachÌs.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Ha
+          habido un terremoto en Managua,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">graniza
+          con fuerza en Madrid.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Los
+          humanos han roto la tierra,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">ya
+          no tienen dÛnde ir.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Como
+          una nuez ha sido partida,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">sus
+          trozos no se pueden unir.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Gracias,
+          terr·queos.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Gracias,
+          mil.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">De
+          Èsta no nos salva</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">ni
+          el mago MerlÌn.</font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoBodyText" align="right">&nbsp;</p>
+        </font><font color="#FF0000"> </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b><span lang="ES-TRAD"> <font size="2"><a name="Malditos_concursos">Malditos
+                    concursos</a></font></span></b></font></font><font face="Verdana"><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">.</font></b></font><b><font
+                color="#FFFFFF" size="1"> Letra: <i>J. Gallardo</i>. M˙sica: <i>1™
+                  K</i>. ( Del LP ìMatraka Monstersî)</font></b></span></font></p>
+      <div style="text-align: center;"><font color="#FFFFFF"> </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Mucho
+          concurso en la tele</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">nos
+          est·n poniendo.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">En&nbsp;
+          unos ganan coches,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">en
+          otros apartamentos.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Si
+          usted participa, si usted participa,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">puede
+          hallar la felicidad.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Comprando
+          el lavavajillas</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">que
+          de moda est·,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">no
+          tiene usted dinero</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">para
+          llegar a fin de mes.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Puede
+          que en este sorteo</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">resulte
+          agraciado.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Participe,
+          participe, °Participe, participe!</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Vaya
+          a la tele</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">y
+          desde allÌ</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">salude
+          a su familia,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">salude,
+          °Salude!</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Un,
+          dos, tres aqui estamos con usted otra vez.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Un,
+          dos, tres aquÌ estamos jodiendo otra vez.</font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FF0000"> </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b><span lang="ES-TRAD"> <font size="2"><a name="La_fiesta">La
+                    fiesta</a></font></span></b></font></font><font face="Verdana"><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">. </font> </b></font>
+            <b> <font color="#FFFFFF" size="1">Letra: <i>J. Gallardo</i>.
+                M˙sica: <i>1™ K</i>. ( Del LP ìMatraka Monstersî)</font></b></span></font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">En
+          la fiesta divertida</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">el
+          que no baila muere aburrido.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Si
+          no llevas traje </font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">no
+          te comes una rosca.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Se lo pasan bien o solo lo hacen ver...</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Est·s
+          obligado a reÌr y saltar.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Nadie
+          te entiende, copÛn ya!</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">No
+          respondo de mis actos,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">puedo
+          saltar dentro de nada</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Se lo pasan bien o solo lo hacen ver...</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Voy
+          a destrozarlo todo,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">la
+          esquizofrenia me traslada.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">No
+          respondo de mis actos,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">mierda
+          de fiesta divertida</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Se lo pasan bien o solo lo hacen ver.</font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoBodyText" style="text-align: center;"> <font color="#FF0000"
+          face="Verdana" size="2"><b> <a name="Huelga_de_hambre"><span lang="ES-TRAD">
+                H</span>uelga de h<span lang="ES-TRAD">ambre</span></a>. </b></font>
+        <font color="#FFFFFF"> <font face="Verdana"> <b> <font size="1">(Directo)</font></b><span
+              lang="ES-TRAD"><font size="1"><b>. Letra y m˙sica: <i>1™ K.</i>(
+                  Del LP en directo ìRockeíníBabiaî)</b></font></span></font></font></p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1">Gasta toda tu energÌa</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> ponte manos a la obra.</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> Agota tres litros de sangre</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> y muÈrete en buena hora.</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> &nbsp;&nbsp;&nbsp; Yo tenÌa treinta aÒos,</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> &nbsp;&nbsp;&nbsp; me convertÌ en un calavera,</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> &nbsp;&nbsp;&nbsp; por hacer caso de alguien,</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> &nbsp;&nbsp;&nbsp; que no me dijo quiÈn era.</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> Pues me declaro</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> en huelga de hambre.</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> Ni a los piojos,</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> les chupo la sangre.</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> Espero que de resultado,</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> antes de quedarme chupado.</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> &nbsp;&nbsp;&nbsp; Yo tenÌa treinta aÒos,</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> &nbsp;&nbsp;&nbsp; me convertÌ en un calavera,</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> &nbsp;&nbsp;&nbsp; por hacer caso de alguien,</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> &nbsp;&nbsp;&nbsp; que no me dijo quiÈn era.</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> El mundo nunca cambia</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> por m·s que controle mi dieta.</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> Concha, ya estoy aquÌ...</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> øquÈ hay esta noche para cenar?.</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> &nbsp;&nbsp;&nbsp; Yo tenÌa treinta aÒos,</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> &nbsp;&nbsp;&nbsp; me convertÌ en un calavera,</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> &nbsp;&nbsp;&nbsp; por hacer caso de alguien,</font></p>
+        </font><br>
+        <font color="#FFFFFF">
+          <p class="MsoBodyText" style="line-height: 200%" align="right"><font face="Verdana"
+              size="1"> &nbsp;&nbsp;&nbsp; que no me dijo quiÈn era.</font></p>
+          <p class="MsoNormal" style="margin-left:0pt" align="right">&nbsp;</p>
+          <p class="MsoNormal" style="margin-left:0pt" align="right"><i> <font
+                size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                    arriba)</font></a></font></i></p>
+          <p class="MsoNormal" style="margin-left:0pt" align="right">&nbsp;</p>
+          <p class="MsoNormal" style="margin-left:0pt" align="right">&nbsp;</p>
+          <p class="MsoBodyText" align="right">&nbsp;</p>
+        </font><font color="#FF0000"> </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b><span lang="ES-TRAD"> <font size="2"><a name="Apocalipsis_I">Apocalipsis
+                    I</a></font></span></b></font></font><font face="Verdana"><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">. </font> </b></font>
+            <b> <font color="#FFFFFF" size="1">Letra</font></b></span><b><font
+              color="#FFFFFF" size="1"> J. Gallardo. M<span lang="ES-TRAD">˙sica:
+                <i>1™ K</i>. </span> </font></b></font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Un
+          cuerpo despierta asustado.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">TodavÌa
+          no ha amanecido.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">øQuÈ
+          es lo que est· pasando?</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">øDe
+          dÛnde viene ese ruido?</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">De
+          luces se llena el cielo,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">los
+          niÒos preguntan øQuÈ es eso?</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Corriendo
+          llegas hasta el refugio</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">gente
+          nerviosa y en el suelo.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Sin peinarse, mal vestidos,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Deja las gafas, coge a los hijos.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Un
+          gran ruido invade la sala,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">el
+          color negro llena sus ojos.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Es
+          la ˙ltima mirada,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">es
+          la ˙ltima mirada.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Desastres, horrores.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Escombros y muertes.</font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoBodyText" align="right">&nbsp;</p>
+        </font><font color="#FF0000"> </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b><span lang="ES-TRAD"> <font size="2"><a name="PrÌncipe_Azul">PrÌncipe
+                    Azul</a></font></span></b></font></font><font face="Verdana"><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">.</font></b></font><b><font
+                color="#FFFFFF" size="1"> Letra</font></b></span><b><font color="#FFFFFF"
+              size="1">: J.Gallardo. M<span lang="ES-TRAD">˙sica: <i>1™ K.</i>
+              </span> </font></b></font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Cincuenta
+          veces has soÒado</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">que
+          se abrÌa la puerta del castillo,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">y
+          por ella entraba trotando</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">un
+          maromo a lomos de un seiscientos.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Cincuenta
+          veces has soÒado</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">un
+          altar lleno de flores,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">el
+          piso casi amueblado,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">y
+          tirarte a Antonio Ozores.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">No
+          hay Lauren Postigo,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">y
+          de verdad yo os digo...</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Mi PrÌncipe Azul, me prometiÛ amor.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          °Oh! PrÌncipe Azul, sÛlo me das dolor.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Y
+          est· lloviendo en el campo,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">mi
+          amor se est· mojando.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Esta
+          noche toca paliza,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">el
+          Madrid ha perdido de cuatro.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Mi PrÌncipe Azul, me prometiÛ amor.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          °Oh! PrÌncipe Azul, sÛlo me das dolor.</font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoBodyText" align="right">&nbsp;</p>
+        </font><font color="#FF0000"> </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b><span lang="ES-TRAD"> <font size="2"><a name="JosÈ_Luis">JosÈ
+                    Luis</a></font></span></b></font></font><font face="Verdana"><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">.</font></b></font><b><font
+                color="#FFFFFF"><font size="1"> Letra: <i>A. DÌaz</i></font></font></b></span><b><font
+              color="#FFFFFF"><font size="1"><i>, J. Gallardo</i><span lang="ES-TRAD">.
+                  M˙sica<i>:</i></span></font><span lang="ES-TRAD"><span lang="ES-TRAD"><i><font
+                      size="1"> L. Solaz</font></i><font size="1">. </font></span></span></font>
+          </b></font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">JosÈ
+          Luis era un chico normal,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">acabÛ
+          el colegio como suele pasar.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Las
+          notas con un aprobao,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">en
+          su casa no les pareciÛ mal.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">El
+          aire que respira en la calle,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">no
+          es el que hay en su hogar.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Sus
+          penas ahoga en vino,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">la
+          barra, territorio nacional.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          øDÛnde encuentra un trabajo?</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          øDÛnde se puede formar?</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">De
+          quÈ sirvieron estudios,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">para
+          tener que vivir en un bar.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">øQuiÈn
+          acepta un consejo?</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">ni
+          nadie sabemos mear.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Le
+          han ofrecido un currele,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">esto
+          puede funcionar.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Metido
+          ahora entre rejas,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">despierto
+          sueÒa con volar.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          øDÛnde encuentra un trabajo?</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          øDÛnde se puede formar?</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">(JosÈ
+          Luis, oh, JosÈ Luis... Tan bon chiquet que ere...)</font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoBodyText" align="right">&nbsp;</p>
+        </font><font color="#FF0000"> </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b><span lang="ES-TRAD"> <font size="2"><a name="El_monstruo">El
+                    monstruo</a></font></span></b></font></font><font face="Verdana"><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">.</font></b></font><b><font
+                color="#FFFFFF" size="1"> Letra: <i>J. Gallardo</i>. M˙sica: <i>P.
+                  Tom·s</i>. </font></b></span></font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">El
+          monstruo de las galletas</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">se
+          me ha aparecido en sueÒos.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">El
+          color de su piel era azul,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">tenÌa
+          el acento madrileÒo.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Dos
+          mil doscientas gaviotas</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">vuelan
+          m·s all· del mar.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Peces
+          en una pecera</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">buscan
+          la libertad.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          øQuiÈn hay detr·s de mis ojos?</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          øDe quÈ color es mi ser?</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Una
+          ventana con ojos y boca,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">me
+          saluda en la habitaciÛn.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">El
+          conejo de la suerte me ha dicho,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">que
+          no es de ciencia-ficciÛn.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">La
+          mujer que llevo dentro</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">se
+          ha puesto celosa otra vez,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">dice
+          que la estoy engaÒando</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">y
+          ya no se que creer.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          øQuiÈn hay detr·s de mis ojos?</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          øDe quÈ color es mi ser?</font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoBodyText" align="right">&nbsp;</p>
+        </font><font color="#FF0000"> </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b><span lang="ES-TRAD"> <font size="2"><a name="Intro">Intro</a></font></span></b></font></font><font
+          face="Verdana"><span lang="ES-TRAD"><font color="#FF0000"><b><font size="2">.
+                </font> </b></font> <b> <font color="#FFFFFF" size="1">M˙sica:
+                <i>L. Solaz</i>. (InÈdita. Grabado en Alcora el 28/4/90)</font></b></span></font></p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoNormal" style="margin-left:0pt" align="right"><i> <font
+                size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                    arriba)</font></a></font></i></p>
+          <p class="MsoBodyText" align="right">&nbsp;</p>
+        </font><font color="#FF0000"> </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b><span lang="ES-TRAD"> <font size="2"><a name="NiÒo_Anarquista">NiÒo
+                    Anarquista</a></font></span></b></font></font><font face="Verdana"><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">. </font> </b></font>
+            <b> <font color="#FFFFFF" size="1">Letra: <i> J. Gallardo.</i>
+                M˙sica: <i>P. Tom·s, L. Solaz</i>.</font></b></span></font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Voy
+          a daros una pista, soy un niÒo anarquista.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">No
+          soy un socialista y mucho menos aliancista.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Todos
+          mis amigos, est·n en mi interior.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Mi
+          partido sÛlo soy yo, y por supuesto, mi religiÛn.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Yo
+          no tengo miedo a nada, no pid·is no os debo nada.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">SÛlo
+          creo en mi mismo, pero no en vuestro fascismo.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Intent·is
+          engaÒarme, no creo que pod·is.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Destrozar
+          mis ideas es lo que dese·is.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Yo
+          no leo las revistas, ni concedo entrevistas.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Voy
+          a daros una pista, soy un chico anarquista,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          (Voy a daros una pista)...</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          SupercalifragilÌsticoespiralidoso.</font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoBodyText" align="right">&nbsp;</p>
+        </font><font color="#FF0000"> </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b><span lang="ES-TRAD"> <font size="2"><a name="Secuestro_legal">Secuestro
+                    legal</a></font></span></b></font></font><font face="Verdana"><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">.</font></b></font><b><font
+                color="#FFFFFF" size="1"> Letra: <i>A. DÌaz</i>. M˙sica: <i>P.
+                  Tom·s, L. Solaz.</i> </font></b></span></font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Alguien
+          que lo explique, por favor.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">øPor
+          quÈ tienen que vivir ellos mejor?.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Tienes
+          que servir a tu Madre Patria...</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">°No
+          me jorobÈis. Mi madre est· en casa!</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          °CÛmo disfruto mi coronel!</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Me estoy corriendo mi brigada.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Vosotros gordos cual barriles.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Y mi vida tenÈis controlada.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Jodedme,
+          jodedme, voy a aguantar.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">He
+          de vigilar vuestros intereses.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">TararÌ
+          por aquÌ, tararÌ por all·.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Como
+          pierdo el culo pa no sacar n·.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          °CÛmo disfruto mi coronel!</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Me estoy corriendo mi brigada.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Vosotros gordos cual barriles.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Y mi vida tenÈis controlada.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Se
+          aproxima el dÌa final.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">øTe
+          dejar·n ir o te har·n quedar?</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">⁄ltimo
+          desfile, ˙ltima humillaciÛn.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Con
+          la blanca en la mano... °A la calle, copÛn!</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          °CÛmo disfruto mi coronel!</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Me estoy corriendo mi brigada.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Vosotros gordos cual barriles.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Y mi vida tenÈis controlada.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Lloras
+          de alegrÌa. Se acabÛ el secuestro.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Te
+          das media vuelta, un corte de mangas.</font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoBodyText" align="right">&nbsp;</p>
+        </font><font color="#FF0000"> </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b><span lang="ES-TRAD"> <font size="2"><a name="El_ozono">El
+                    ozono</a></font></span></b></font></font><font face="Verdana"><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">.</font></b></font><b><font
+                color="#FFFFFF" size="1"> Letra: </font></b></span><b><font color="#FFFFFF"
+              size="1"> <i>J. Gallardo</i><span lang="ES-TRAD">. M˙sica: <i>P.
+                  Tom·s</i>. </span></font></b></font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Destrozando
+          el medio en que vivimos, no podemos seguir.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">A
+          todo bicho viviente estamos exterminando.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Incluso
+          entre nosotros por el culo nos estamos dando.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          El ozono, la Amazonia, las ballenas y los parques naturales.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">No
+          m·s matanzas indiscriminadas de animales.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Boicotearemos
+          la construcciÛn de centrales nucleares.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">No
+          dejemos que Seprona siga quemando nuestros ·rboles.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Y los pinos, y las focas, y los mares y la de zonas industriales.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">(Moriremos
+          ahogados en la mierda...)</font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;</font></p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoBodyText" align="right">&nbsp;</p>
+        </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana"><span
+            lang="ES-TRAD"> <b> <font color="#FF0000" size="2"><a name="Pide_perdÛn">Pide
+                  perdÛn</a></font><font color="#FF0000" size="1">.</font><font
+                color="#FFFFFF" size="1"> Letra: <i>J. Gallardo</i>. M˙sica: <i>L.
+                  Solaz, P. Tom·s</i>. </font></b></span></font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">QuÈ
+          bonito es levantarse un domingo por la maÒana,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">ir
+          a la iglesia de tu barrio, y cÛmo no, rezar el rosario.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Mojarte
+          los labios con agua bendita,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">poner
+          verdes a unos y otros, y escuchar la palabra divina.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Pide perdÛn por tus pecados, est·s en tu derecho.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Pide perdÛn por tus pecados, est·s en tu derecho.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">MaÒana
+          volver·s para apartar de ti el pecado.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">MaÒana
+          hablar·s de amor, del que est· enfrente y del que est· a tu lado</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Pide perdÛn por tus pecados, est·s en tu derecho.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Pide perdÛn por las acciones que cada dÌa vienes realizando.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Amaos
+          unos a los otros, como yo os he amado,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">y
+          seÒalad con el dedo a todos vuestros queridos hermanos.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Pide perdÛn por tus pecados, est·s en tu derecho.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Pide perdÛn por las acciones que cada dÌa vienes realizando.</font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FF0000"> </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b><span lang="ES-TRAD"> <font size="2"><a name="SÛlo_Ûrdenes">SÛlo
+                    Ûrdenes</a></font></span></b></font></font><font face="Verdana"><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">.</font></b></font><b><font
+                color="#FFFFFF" size="1"> Letra: <i>A. DÌaz</i>. M˙sica: <i>L.
+                  Solaz.</i> </font></b></span></font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">No
+          hay bastantes armas ni bastantes Ûrdenes,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">para
+          borrar del mapa a millones de seres.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Siempre
+          encontrar·s alguno en tu cama,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">que
+          te morder· mientras estÈs jodiendo.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Dios mÌo s·lvame y por favor ten piedad.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Yo sÛlo cumplÌa Ûrdenes, seguro que lo dir·s.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">La
+          esv·stica en el brazo poco puede hacer por ti.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Pagar·s
+          todas las muertes, ya ver·s lo que es sufrir.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Tu
+          cabeza y tu barriga no lo van a resistir.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">El
+          dolor y la impotencia te acompaÒan hasta el fin.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Dios mÌo s·lvame y por favor ten piedad.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Yo sÛlo cumplÌa Ûrdenes, seguro que lo dir·s.</font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoBodyText" align="right">&nbsp;</p>
+        </font><font color="#FF0000"> </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b><span lang="ES-TRAD"> <font size="2"><a name="No_puedes_m·s">No
+                    puedes m·s</a></font></span></b></font></font><font face="Verdana"><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">.</font></b></font><b><font
+                color="#FFFFFF" size="1"> Letra y m˙sica: <i>P. Tom·s</i>.
+                (InÈdita. Grabado en Alcora el 28/4/90)</font></b></span></font></p>
+      <div style="text-align: center;"><font color="#FFFFFF"> </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">La
+          noche te atrapÛ</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">en
+          un sucio callejÛn.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">El
+          miedo y la confusiÛn,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">se
+          mezclaron sin razÛn.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          No puedes m·s, tu cabeza va a estallar.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Y gritar·s, dando vueltas sin parar.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          No puedes m·s... No puedes m·s.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">El
+          Chato ya se fuÈ,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">nada
+          puedes ya ligar.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">El
+          Gaviota y el San Juan</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">no
+          se enrollan si no hay papel.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          No puedes m·s, tu cabeza va a estallar.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Y gritar·s, dando vueltas sin parar.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          No puedes m·s... No puedes m·s.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Todo
+          es desesperaciÛn,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">Miedo
+          angustia y ansiedad.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">la
+          muerte o la locura,</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">cualquier
+          dÌa te secuestrar·n.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          No puedes m·s, tu cabeza va a estallar.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          Y gritar·s, dando vueltas sin parar.</font></p>
+      <p class="MsoBodyText" style="text-align: center;"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+          No puedes m·s... No puedes m·s.</font></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p class="MsoBodyText" style="text-align: center;">&nbsp;</p>
+      <div style="text-align: center;"><font color="#FFFFFF">
+          <p class="MsoBodyText" align="right">&nbsp;</p>
+        </font><font color="#FF0000"> </font></div>
+      <p class="MsoBodyText" style="text-align: center;"><font color="#FF0000"><font
+            face="Verdana"><b><span lang="ES-TRAD"> <font size="2"><a name="El_Nani">El
+                    Nani</a></font></span></b></font></font><font face="Verdana"><span
+            lang="ES-TRAD"><font color="#FF0000"><b><font size="2">. </font> </b></font><b><font
+                color="#FFFFFF" size="1">AdaptaciÛn desafortunada. (InÈdita.
+                Grabado en Alcora el 28/4/90)</font></b></span></font></p>
+      <p class="MsoNormal" style="margin-left: 0pt; text-align: center;"><i> <font
+            size="1"><a href="#inicio"><font color="#FFFF00" face="Verdana">(Volver
+                arriba)</font></a></font></i></p>
+      <p style="text-align: center;">&nbsp;</p>
+      <p align="center"> </p>
+    </main>
+  </body>
 </html>
