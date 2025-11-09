@@ -1,80 +1,29 @@
 /* reset básico */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html, body {
-    background-color: #000
-    height: 100%;
-    font-family: Arial, sans-serif;
-}
+html, body { height: 100%; font-family: Arial, sans-serif; }
 
 body {
-    background-color: #000;
-    background: url("imagenes/_MG_5152b.jpg") no-repeat center/cover;
+    background: #000 url("imagenes/_MG_5152b.jpg") no-repeat center/cover;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 3vh; /* separación general del borde superior */
+    padding-top: 3vh;
 }
 
-/* 1ª KOMUNION centrado */
-.cabecera {
-    text-align: center;
-}
+.cabecera { text-align: center; }
+.logo img { height: 145px; width: auto; max-width: 90vw; }
 
-.logo img {
-    height: 145px;   /* tamaño original */
-    width: auto;
-    max-width: 90vw;
-}
+.btn-entrar { display: inline-block; margin-top: 1rem; }
+.btn-entrar img { height: 69px; width: auto; max-width: 90vw; transition: transform .25s; }
+.btn-entrar:hover img { transform: scale(1.05); filter: brightness(1.15); }
 
-/* botón Entrar justo debajo */
-.btn-entrar {
-    display: inline-block;
-    margin-top: 1rem;
-}
-.btn-entrar img {
-    height: 69px;
-    width: auto;
-    max-width: 90vw;
-    transition: transform .25s;
-}
-.btn-entrar:hover img {
-    transform: scale(1.05);
-    filter: brightness(1.15);
-}
+.memoria { margin-top: 8vh; text-align: center; max-width: 90vw; }
+.foto-memoria { width: 400px; max-width: 80%; height: auto; border-radius: 6px; }
+.texto-memoria { margin-top: .8rem; color: #ffeb3b; font-size: 1.1rem; text-shadow: 1px 1px 2px #ffea00; }
 
-/* bloque memoria más abajo y centrado */
-.memoria {
-    margin-top: 8vh;   /* separación hacia abajo */
-    text-align: center;
-    max-width: 90vw;
-}
-
-.memoria img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px; /* opcional, suaviza bordes */
-}
-
-.texto-memoria {
-    margin-top: 0.8rem;
-    color: #ffeb3b;        /* amarillo */
-    font-size: 1.1rem;
-    text-shadow: 1px 1px 2px #fff; /* legibilidad sobre fondo */
-}
-
-/* ----------- RESPONSIVE ----------- */
 @media (max-width: 600px) {
-    .logo img {
-        max-height: 120px;
-    }
-    .btn-entrar img {
-        max-height: 60px;
-    }
-    .texto-memoria {
-        font-size: 1rem;
-    }
-
+    .logo img { max-height: 120px; }
+    .foto-memoria { width: 90%; }
 }
-

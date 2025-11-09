@@ -1,18 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <background-color: #000>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Página nueva 1</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>1ª KOMUNION</title>
+    <!-- ESTILOS -->
+    <style>
+        /* Fondo común */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            background: #000 url("imagenes/_MG_5152b.jpg") no-repeat center/cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: #ffff00;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Logo */
+        .cabecera .logo img {
+            max-width: 90%;
+            height: auto;
+        }
+
+        /* Botón entrar (mismo estilo que la página index anterior) */
+        .entrar-btn {
+            display: inline-block;
+            background-color: #ac40f8;
+            color: #ffea00;
+            text-decoration: none;
+            padding: 1rem 3rem;
+            font-size: 1.6rem;
+            font-weight: 700;
+            border-radius: 50px;
+            box-shadow: 0 8px 28px rgba(172, 64, 248, 0.35);
+            transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease;
+            margin-top: 25px;
+        }
+        .entrar-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 255, 0, 0.8);
+            background-color: #b35cf8;
+        }
+
+        /* Sección memoria */
+        .memoria {
+            margin-top: 3rem;
+        }
+        .foto-memoria {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #ff0000;
+        }
+        .texto-memoria {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+    </style>
   </head>
   <body>
-        <background-color: #000>
-    <header class="cabecera"> <a href="inicio.htm" class="logo"> <img src="imagenes/texto%20logo1.gif"
-          alt="1ª KOMUNION"></a><br>
-      <a href="inicio.htm" class="btn-entrar"><img src="imagenes/entrar1.gif" alt="Entrar"></a></header>
-    <section class="memoria"><br>
+    <header class="cabecera"> <a href="index.htm" class="logo"> </a><br>
+      <a href="index.htm" class="logo"><img src="imagenes/texto%20logo1.gif" alt="1ª KOMUNION"></a><br>
+      <br>
+      <a href="index.htm" class="logo"> </a> <a href="inicio.htm" class="entrar-btn">ENTRAR</a><br>
       <br>
       <br>
       <br>
@@ -20,13 +78,14 @@
       <br>
       <br>
       <br>
-      <img src="imagenes/Bicidep.jpg" alt="Antonio &quot;Bici&quot; Díaz" style="width: 400px; max-width: 80%; height: auto;">
-      <p class="texto-memoria"> En memoria de </p>
-      <p class="texto-memoria"> Antonio "Bici" Díaz. </p>
-      <p class="texto-memoria">D.E.P. </p>
+      <br>
+      <br>
+    </header>
+    <section class="memoria"> <img src="imagenes/Bicidep.jpg" alt="Antonio &quot;Bici&quot; Díaz"
+        class="foto-memoria">
+      <p class="texto-memoria"> En memoria de<br>
+        Antonio "Bici" Díaz.<br>
+        D.E.P. </p>
     </section>
   </body>
 </html>
-
-
-
