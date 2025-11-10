@@ -201,6 +201,15 @@ body {
     max-width: 700px;
     margin: 0 auto 1rem;
 }
+.credito {
+    font-size: .95rem;
+    line-height: 1.5;
+    color: #ac40f8;
+    white-space: pre-line;
+    max-width: 700px;
+    margin: 0 auto 1rem;
+}
+
 .volver {
     font-size: .8rem;
 }
