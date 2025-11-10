@@ -1,30 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Prensa – 1ª KOMUNION</title>
-    <link rel="stylesheet" href="estilos-int.css">
-  </head>
-  <body>
-    <!-- Logo que SIEMPRE vuelve a index.htm -->
-    <header class="cabecera"> <a href="index.htm" class="logo"> <img src="imagenes/texto%20logo1.gif"
-          alt="1ª KOMUNION"> </a> </header>
-    <!-- Menú horizontal entre líneas moradas -->
-    <nav class="nav-principal">
-      <ul>
-        <li><a href="inicio.htm">Inicio</a></li>
-        <li><a href="biografia.htm">Biografía</a></li>
-        <li><a href="discografia.htm">Discografía</a></li>
-        <li><a href="imagenes.htm">Imágenes</a></li>
-        <li><a href="letras.htm">Audios</a></li>
-        <li><a href="videos.htm" class="active">Vídeos</a></li>
-        <li><a href="prensa.htm">Prensa</a></li>
-        <li><a target="_blank" href="https://facebook.com/1aKomunion">Facebook</a></li>
-      </ul>
-    </nav>
-    <div class="video-wrapper"> <iframe src="https://www.youtube.com/embed/videoseries?list=PL994A556DBE59DD23&amp;hl=es_ES"
-        allowfullscreen="" height="360" frameborder="0" width="640"> </iframe>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vídeos – 1ª KOMUNION</title>
+  <link rel="stylesheet" href="estilos-int.css">
+
+  <!-- Estilos para centrar y hacerlos responsive -->
+  <style>
+    .videos-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;               /* espacio entre vídeos */
+      padding: 2rem 1rem;
+    }
+    .video-single {
+      width: 100%;
+      max-width: 640px;        /* mismo ancho que antes */
+    }
+    .video-single iframe {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;    /* mantiene proporción */
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Logo -->
+  <header class="cabecera">
+    <a href="index.htm" class="logo">
+      <img src="imagenes/texto%20logo1.gif" alt="1ª KOMUNION">
+    </a>
+  </header>
+
+  <!-- Menú -->
+  <nav class="nav-principal">
+    <ul>
+      <li><a href="inicio.htm">Inicio</a></li>
+      <li><a href="biografia.htm">Biografía</a></li>
+      <li><a href="discografia.htm">Discografía</a></li>
+      <li><a href="imagenes.htm">Imágenes</a></li>
+      <li><a href="letras.htm">Audios</a></li>
+      <li><a href="videos.htm" class="active">Vídeos</a></li>
+      <li><a href="prensa.htm">Prensa</a></li>
+      <li><a target="_blank" href="https://facebook.com/1aKomunion">Facebook</a></li>
+    </ul>
+  </nav>
+
+  <!-- Vídeo 1 -->
+<div class="video-single">
+  <h3 class="video-title">Llum d'estiu - 1989</h3>
+  <iframe src="https://www.youtube.com/embed/5hAwmdKv508"
+          allowfullscreen></iframe>
+</div>
+
+<!-- Vídeo 2 -->
+<div class="video-single">
+  <h3 class="video-title">Bestialc 2008 (Completo)</h3>
+  <iframe src="https://www.youtube.com/embed/VIDEO_ID_2"
+          allowfullscreen></iframe>
+</div>
+
+<!-- Vídeo 3 -->
+<div class="video-single">
+  <h3 class="video-title">II Vive Rock 2011 (Completo)</h3>
+  <iframe src="https://www.youtube.com/embed/VIDEO_ID_3"
+          allowfullscreen></iframe>
+</div>
+
+<!-- Vídeo 4 -->
+<div class="video-single">
+  <h3 class="video-title">Bestialc 2013 (Completo)</h3>
+  <iframe src="https://www.youtube.com/embed/VIDEO_ID_4"
+          allowfullscreen></iframe>
+</div>
+
+<!-- Vídeo 5 -->
+<div class="video-single">
+  <h3 class="video-title">Quería el mundo cambiar (Homenaje a Morcillo)</h3>
+  <iframe src="https://www.youtube.com/embed/VIDEO_ID_5"
+          allowfullscreen></iframe>
+</div>
+
+      
+      </div>
     </div>
-  </body>
+  </main>
+</body>
 </html>
