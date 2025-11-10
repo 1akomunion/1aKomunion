@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="estilos-int.css">
   </head>
   <body>
-    <!-- Logo que SIEMPRE vuelve a index.htm -->
-    <header class="cabecera"> <a href="index.htm" class="logo"> <img src="imagenes/texto%20logo1.gif"
+    <header class="cabecera"> <a href="index.htm" class="logo"> <img src="imagenes/texto%20logo1.gif"
+
           alt="1ª KOMUNION"> </a> </header>
     <!-- Menú horizontal entre líneas moradas -->
     <nav class="nav-principal">
@@ -17,72 +17,522 @@
         <li><a href="biografia.htm">Biografía</a></li>
         <li><a href="discografia.htm">Discografía</a></li>
         <li><a href="imagenes.htm">Imágenes</a></li>
+        <li><a href="letras.htm" class="active">Audios</a></li>
         <li><a href="videos.htm">Vídeos</a></li>
         <li><a href="prensa.htm">Prensa</a></li>
-        <li><a href="letras.htm" class="active">Letras</a></li>
         <li><a target="_blank" href="https://facebook.com/1aKomunion">Facebook</a></li>
       </ul>
     </nav>
     <main class="contenido letras">
+      <div id="inicio"></div>
       <div class="indice-letras"> <a href="#Primera_Komunion">Primera Komunión</a>
-        <a href="#Iran_Iraq">Irán – Iraq</a> <a href="#Soldadito_Espanol">Soldadito
+        <a href="#Iran_-_Iraq">Irán – Iraq</a> <a href="#Soldadito_Espanol">Soldadito
           Español</a> <a href="#Si_fuera_Dios">Si fuera Dios</a> <a href="#Platanos">Plátanos…</a>
         <a href="#Suena_la_sirena">Suena la sirena</a> <a href="#Mierda_y_sangre">Mierda
-          y sangre</a> <a href="#En_el_culo">En el culo</a> <a href="#Ulcera">Úlcera</a>
-        <a href="#Tu_trozo_de_libertad">Tu trozo de libertad</a> <a href="#Inseguridad_Social">Inseguridad
+          y sangre</a> <a href="#El_puto_sabor">El puto sabor</a><a href="#En_el_culo">En
+          el culo</a> <a href="#Ulcera">Úlcera</a> <a href="#Tu_trozo_de_libertad">Tu
+          trozo de libertad</a> <a href="#Inseguridad_Social">Inseguridad
           Social</a> <a href="#Hambre">Hambre</a> <a href="#Ser_alcalde">Ser
           alcalde…</a> <a href="#Consumir">Consumir</a> <a href="#Que_se_voten_ellos">Que
-          se voten ellos</a> <a href="#Hombre_Salvaje">Hombre Salvaje</a> <a href="#No_puede_ser">No
-          puede ser</a> <a href="#Francisquillo">Francisquillo</a> <a href="#Goodway_Paco">Goodway
-          Paco</a> <a href="#Nada_sabras">Nada sabrás</a> <span style="color: yellow;"></span>
-        <a href="#Ajedrez_mortal">Ajedrez mortal</a><a href="#Nino_Anarquista">Niño
-          Anarquista</a><a href="#Apestados_Unidos">Apestados Unidos</a> <a href="#Jose_Luis">José
-          Luis</a><a href="#El_ozono">El ozono</a>&nbsp; <a href="#El_monstruo">El
-          monstruo</a><a href="#Solo_ordenes">Sólo órdenes</a><a href="#Principe_Azul">Príncipe
-          Azul</a> <a href="#Pide_perdon">Pide perdón</a><a href="#El_Racismo">El
-          Racismo</a> <a href="#Secuestro_legal">Secuestro legal</a><a href="#Apocalipsis_I">Apocalipsis
-          I</a><a href="#Barrios_bajos">Barrios bajos</a> <a href="#Apocalipsis_II">Apocalipsis
-          II</a> <a href="#Malditos_concursos">Malditos concursos</a> <a href="#La_fiesta">La
-          fiesta</a> <a href="#Huelga_de_hambre">Huelga de hambre</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="#Intro">Intro</a>&nbsp;&nbsp; <a href="#No_puedes_mas">No
-          puedes más</a> <a href="#El_Nani">El Nani</a> </div>
+          se voten ellos</a> <a href="#Hombre_Salvaje">Hombre Salvaje</a> <a href="#El_mangui">El
+          mangui</a> <a href="#No_puede_ser">No puede ser</a> <a href="#Francisquillo">Francisquillo</a>
+        <a href="#Goodway_Paco">Goodway Paco</a> <a href="#Nada_sabras">Nada
+          sabrás</a> <span style="color: yellow;"></span> <a href="#Ajedrez_mortal">Ajedrez
+          mortal</a><a href="#Nino_Anarquista">Niño Anarquista</a><a href="#Apestados_Unidos">Apestados
+          Unidos</a> <a href="#Jose_Luis">José Luis</a><a href="#El_ozono">El
+          ozono</a>&nbsp; <a href="#El_monstruo">El monstruo</a><a href="#Solo_ordenes">Sólo
+          órdenes</a><a href="#Principe_Azul">Príncipe Azul</a> <a href="#Pide_perdon">Pide
+          perdón</a><a href="#El_Racismo">El Racismo</a> <a href="#Secuestro_legal">Secuestro
+          legal</a><a href="#Apocalipsis_I">Apocalipsis I</a><a href="#Barrios_bajos">Barrios
+          bajos</a> <a href="#Apocalipsis_II">Apocalipsis II</a> <a href="#Malditos_concursos">Malditos
+          concursos</a> <a href="#La_fiesta">La fiesta</a> <a href="#Huelga_de_hambre">Huelga
+          de hambre</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Intro">Intro</a>&nbsp;&nbsp;
+        <a href="#No_puedes_mas">No puedes más</a> <a href="#El_Nani">El Nani</a>
+      </div>
       <!-- ====== CANCIONES ====== -->
       <section class="cancion">
         <h2 id="Primera_Komunion">Primera Komunión</h2>
-        <!-- REPRODUCTOR --> <audio controls="controls" preload="none"> <source
-            src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
-          navegador no soporta audio HTML5. </audio>
-        <p class="letra">
-                Yo tenía 9 años,<br>
-                y como no, iba a un colegio de Hermanos.<br>
-                Me enseñaron todos los pecados capitales,<br>
-                pero no me dijeron ninguna de las mayores verdades.<br>
-                &nbsp;&nbsp;&nbsp;Por un sucio sacramento<br>
-                Una iglesia llena de niños,<br>
-                todos vestiditos iguales.<br>
-                Dinero gastado en vano;<br>
-                El viejo sin un duro en los bolsillos.<br>
-                (Abre el bolsillo y cierra la boca)<br>
-                &nbsp;&nbsp;&nbsp;Por un sucio sacramento
-            </p>
+        <p class="credito">Letra y música 1ª K. (De la maqueta “Tour ’89”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none"> <source src="audios/01%20-%201a%20Komunion.mp3"
+
+            type="audio/mpeg"> Tu navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Yo tenía 9 años,<br>¡y cómo no!, iba a un colegio de Hermanos.<br>Me enseñaron todos los pecados capitales,<br>pero no me dijeron ninguna de las mayores verdades.<br>&nbsp;&nbsp;&nbsp; Por un sucio sacramento<br>Una iglesia llena de niños,<br>todos vestiditos iguales.<br>Dinero gastado en vano;<br>El viejo sin un duro en los bolsillos.<br>(Abre el bolsillo y cierra la boca)<br>&nbsp;&nbsp;&nbsp; Por un sucio sacramento</p>
         <p class="volver"><a href="#inicio">Volver arriba</a></p>
       </section>
-      <!-- (Aquí irían el resto de canciones igual: <section class="cancion">…</section>) -->
-      <!-- EJEMPLO: Irán – Iraq -->
       <section class="cancion">
-        <h2 id="Iran_Iraq">Irán – Iraq</h2>
-        <p class="letra">
-                Irán, Iraq. Irán, Iraq. Irán, Iraq… Petróleo.<br>
-                Irán, Iraq. Irán, Iraq. Irán, Iraq… Agobio.<br>
-                Irán, Iraq. Irán, Iraq. Irán, Iraq… Religión.<br>
-                Irán, Iraq. Irán, Iraq. Irán, Iraq… Maldición.<br>
-                Irán, Iraq. Irán, Iraq. Irán, Iraq… Armas.<br>
-                Irán, Iraq. Irán, Iraq. Irán, Iraq… Almas.<br>
-                (Yeah… Penyagolosa)
-            </p>
+        <h2 id="Iran_-_Iraq">Irán - Iraq</h2>
+        <p class="credito">Letra: J.Gallardo, A. Díaz. Música: L. Solaz. (De la maqueta “Tour ’89”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/02%20-%20Iran%20-%20Iraq.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Irán, Iraq. Irán, Iraq. Irán, Iraq... Petróleo.<br>Irán, Iraq. Irán, Iraq. Irán, Iraq... Agobio.<br>Irán, Iraq. Irán, Iraq. Irán, Iraq... Religión.<br>Irán, Iraq. Irán, Iraq. Irán, Iraq... Maldición.<br>Irán, Iraq. Irán, Iraq. Irán, Iraq... Armas.<br>Irán, Iraq. Irán, Iraq. Irán, Iraq... Almas.<br>(Yeah... Penyagolosa)</p>
         <p class="volver"><a href="#inicio">Volver arriba</a></p>
       </section>
-      <!-- Puedes copiar/pegar el bloque <section> tantas veces como necesites
-             y cambiar el id, el título y la letra. --> </main>
+      <section class="cancion">
+        <h2 id="Soldadito_Espanol">Soldadito Español</h2>
+        <p class="credito">Letra: A. Díaz. Música: 1ª K. (De la maqueta “Tour ’89”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/03%20-%20Soldadito%20espa%C3%B1ol.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Pasé un año entero,<br>oprimido por negreros.<br>Estrellas y galones,<br>me tocaron los cojones.<br>&nbsp;&nbsp;&nbsp; Las pelotas en la puerta,<br>&nbsp;&nbsp;&nbsp; me dijeron al entrar.<br>&nbsp;&nbsp;&nbsp; Aquí harás lo que te digan.<br>&nbsp;&nbsp;&nbsp; Y la boca cerrarás!<br>Me llevaron a la Jura...<br>Y para colmo había un cura.<br>Ejército y clero,<br>se reparten el dinero.<br>Esto pronto se va a acabar.<br>Esto pronto terminará.<br>Por su Patria y su bandera<br>mi sangre no correrá!</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Si_fuera_Dios">Si fuera Dios</h2>
+        <p class="credito">Letra: J. Gallardo. Música: P. Tomás. (De la maqueta “Tour ’89”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/04%20-%20Si%20fuera%20Dios.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Si yo pudiera ser Dios, curaría a los enfermos,<br>pero como no lo soy, escupo a los necios.<br>Si yo pudiera ser Dios, no trabajaría jamás,<br>pero como no lo soy, hago currar a los demás.<br>&nbsp;&nbsp;&nbsp; Padre Nuestro, (Nuestro Señor)<br>&nbsp;&nbsp;&nbsp; Padre Nuestro, (Santificado)<br>Si yo pudiera ser Dios, haría ver a los ciegos,<br>pero como no lo soy, tapo los ojos con dinero.<br>Si yo pudiera adivinar el futuro... no se lo diría a nadie<br>si yo pudiera ser Dios... ¡Ay madre!<br>&nbsp;&nbsp;&nbsp; Padre Nuestro, (Nuestro Señor)<br>&nbsp;&nbsp;&nbsp; Padre Nuestro, (Santificado)</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Platanos">Plátanos...</h2>
+        <p class="credito">Letra: A. Díaz. Música: L. Solaz. (De la maqueta “Tour ’89”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/05%20-%20Pl%C3%A1tanos...mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Cientos de monos controlan las calles,<br>cientos de monos te quieren aplastar.<br>Cientos de monos con uniforme,<br>mierda de monos, os vamos a matar!<br>&nbsp;&nbsp;&nbsp; Plátanos... pa los monos.<br>&nbsp;&nbsp;&nbsp; Plátanos... os vamos a dar.<br>Sois una raza en extinción<br>sin vuestras pistolas no hay valor.<br>Nosotros aguantamos todo el mogollón.<br>Perros de mierda, moriréis sin honor.<br>&nbsp;&nbsp;&nbsp; Plátanos... pa los monos.<br>&nbsp;&nbsp;&nbsp; Plátanos... os vamos a dar.<br>Monos. Quiero monos muertos,<br>muertos para abonar los huertos.<br>Hijos de puta, orden y ley.<br>Fachas de mierda, pronto moriréis.<br>&nbsp;&nbsp;&nbsp; Plátanos... pa los monos.<br>&nbsp;&nbsp;&nbsp; Plátanos... os vamos a dar.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Suena_la_sirena">Suena la sirena</h2>
+        <p class="credito">Letra: J, Gallardo, Música: L. Solaz. (De la maqueta “Tour ’89”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/06%20-%20Suena%20la%20sirena.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Suena, siempre suena, la puta sirena.<br>Son las ocho en punto... ¡Hay que trabajar!<br>El jefe te grita, ya no aguantas más.<br>Basta ya de historias, ¡Vas a reventar!<br>&nbsp;&nbsp;&nbsp; Tu eres el explotado,<br>&nbsp;&nbsp;&nbsp; tu estás muy mal pagado.<br>&nbsp;&nbsp;&nbsp; Tu sangre estás vomitando,<br>&nbsp;&nbsp;&nbsp; morirás como un esclavo.<br>Han dado las seis, te quieres pirar.<br>Por hoy ya es bastante... ¡Mañana será igual!<br>Suena, siempre suena, la puta sirena.<br>Son las ocho en punto... ¡Hay que trabajar!<br>&nbsp;&nbsp;&nbsp; Tu eres el explotado,<br>&nbsp;&nbsp;&nbsp; tu estás muy mal pagado.<br>&nbsp;&nbsp;&nbsp; Tu sangre estás vomitando,<br>&nbsp;&nbsp;&nbsp; morirás como un esclavo.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Mierda_y_sangre">Mierda y sangre</h2>
+        <p class="credito">Letra: J.Gallardo, César Gasch. Música: Adaptada. (De la maqueta “Tour ’89”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/07%20-%20Mierda%20y%20sangre.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">No hay más noble animal, que el toro Nacional.<br>Si te portas mal, con la daga acabarás,<br>y por culo te darán, en la fiesta Nazi-nacional.<br>&nbsp;&nbsp;&nbsp; ¡Mierda y Sangre!</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="El_puto_sabor">El puto sabor</h2>
+        <p class="credito">Letra: A.Díaz, J. Gallardo.Música: P. Tomás. (De la maqueta “Tour ’89”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/08%20-%20El%20puto%20sabor.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Quiero comer Fritos,<br>a ver si los vomito.<br>Si tu estás a mi lado<br>verás lo que es...<br>&nbsp;&nbsp;&nbsp; El puto, el puto, el puto sabor.<br>&nbsp;&nbsp;&nbsp; El puto, el puto, el puto sabor...<br>&nbsp;&nbsp;&nbsp; Americano. Americano. Americano. A - me - ricano.<br>Entra en la tienda. Elige la bolsita.<br>Come deprisita pa que te siente mal.<br>&nbsp;&nbsp;&nbsp; El puto, el puto, el puto sabor.<br>&nbsp;&nbsp;&nbsp; El puto, el puto, el puto sabor...<br>&nbsp;&nbsp;&nbsp; Americano. Americano. Americano. A - me - ricano.<br>Ahora estás enfermo, te retuerces en la cama.<br>Tu vieja como loca busca un médico de guardia.<br>&nbsp;&nbsp;&nbsp; El puto, el puto, el puto sabor.<br>&nbsp;&nbsp;&nbsp; El puto, el puto, el puto sabor...<br>&nbsp;&nbsp;&nbsp; Americano. Americano. Americano. A - me - ricano.<br>Ya no hay solución. Eres una rata más.<br>Contigo han probado el nuevo material<br>&nbsp;&nbsp;&nbsp; El puto, el puto, el puto sabor.<br>&nbsp;&nbsp;&nbsp; El puto, el puto, el puto sabor...<br>&nbsp;&nbsp;&nbsp; Americano. Americano. Americano. A - me - ricano.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="En_el_culo">En el culo</h2>
+        <p class="credito">Letra: J. Gallardo, César Gasch. Música:Adaptada. (De la maqueta “Tour ’89”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/09-%20En%20el%20culo.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">He intentado un suicidio, un suicidio por amor.<br>Ahora tengo mucho miedo, y en el culo ¡un cagallón!<br>&nbsp;&nbsp;&nbsp; Los niñatos, los moñatos, los que bailan tecno-pop,<br>ahora tienen mucho miedo, y en el culo ¡un cagallón!<br>&nbsp;&nbsp;&nbsp; Los Hermanos de la Salle son más buenos que el copón,<br>Los Hermanos de la Salle, ¡que nos llevan de excursión!<br>Los Hermanos de la Salle son más buenos que el copón,<br>Los Hermanos de la Salle, y en el culo ¡un cagallón!</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Ulcera">Ulcera</h2>
+        <p class="credito">Letra: J. Gallardo. Música: Adaptada. (Inédita.)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/10%20-%20Ulcera.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Entro en el bar, y no puedo aguantar<br>el beber cerveza o beber pacharán.<br>Pido que me pongan algo de privar.<br>Pido que me pongan ¡Lo que sea ya!<br>&nbsp;&nbsp;&nbsp; ¡Ahhhh me da el ardor. Joder qué mal.<br>&nbsp;&nbsp;&nbsp; Podrida úlcera gastroduodenal.<br>Me tomo por un tubo el prinperán.<br>Y antiácidos no me quedan ya.<br>No puedo privar más. No puedo privar más.<br>Solo puedo ingerir... ¡Agua mineral!</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Tu_trozo_de_libertad">Tu trozo de libertad</h2>
+        <p class="credito">J. Gallardo. Música: 1ª K. (Del LP “1ª Komunión”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/01%20-%20Tu%20trozo%20de%20libertad.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Sales de tu casa. cosa rara en tí,<br>buscas algo nuevo, quieres olvidar.<br>Tratas de perder de vista la ciudad<br>si eso quieres. si eso quieres de verdad.<br>Corre como un loco hacia el disco-bar,<br>ahí está tu trozo de libertad,<br>Tu colega ha pillao, y ya está volando.<br>¿Cómo es?. ¿Qué se siente allá arriba flotando?<br>Son varias horas de viaje a ningún sitio.<br>Son sensaciones que nunca has conocido.<br>Aureolas de colores, picores en la piel,<br>risas en la boca, te sentirás bien.<br>Vuelves a este mundo tan aburrido.<br>¡Para qué tanta historia!.<br>?De qué coño ha servido?</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Inseguridad_Social">Inseguridad Social</h2>
+        <p class="credito">Letra: J. Gallardo. Música: L. Solaz. (Del LP “1ª Komunión”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/02%20-%20Inseguridad%20social.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">¡Vaya asistencia sanitaria<br>que recibimos!.<br>¡Cómo nos chupan la sangre<br>esos vampiros!.<br>Te pasas sesenta y cinco<br>cotizando, cotizando.<br>¡Cuánta pasta malgastada!,<br>Para nada, para nada.<br>Vas al médico<br>por un simple constipao,<br>y acabas con el estómago<br>casi destrozao.<br>Si confías en tu médico<br>estás perdido, estás perdido.<br>Y si vas de chico bueno,<br>no te digo, no te digo.<br>Ojala no caigas nunca<br>malo en la cama,<br>más vale que sigas sano<br>como una manzana.<br>Si te rompes algo <br>te costará mucho arreglarlo.<br>No preguntes que ha pasado,<br>nadie sabrá explicarlo.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Hambre">Hambre</h2>
+        <p class="credito">Letra: A. Díaz. Música: P. Tomás, L. Solaz. (Del LP “1ª Komunión”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/03%20-%20Hambre.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Hay mucha hambre en el mundo<br>pero tu poco puedes hacer.<br>Siguen habiendo guerras en el mundo,<br>pero la humanidad debe perecer.<br>Los que gobiernan siguen engordando<br>y a sus ejércitos quieren engrandecer.<br>&nbsp;&nbsp;&nbsp; Jodidos carroñeros<br>&nbsp;&nbsp;&nbsp; una limosna, por favor.<br>&nbsp;&nbsp;&nbsp; Repartid vuestro dinero<br>&nbsp;&nbsp;&nbsp; y todo irá mejor.<br>El Vaticano tiene muchos tesoros.<br>y el Papa es muy bueno con sus fieles.<br>En Etiopía los entierran a todos.<br>¡Woitila, reparte tus bienes!<br>Ves como mueren los negritos,<br>pero tu sigues ahí con tus rollizos michelines.<br>&nbsp;&nbsp;&nbsp; Dólares y armas<br>&nbsp;&nbsp;&nbsp; para la paz mundial.<br>&nbsp;&nbsp;&nbsp; El Vaticano... <br>&nbsp;&nbsp;&nbsp; ¡esta multinacional!<br>Hay mucha hambre en el mundo.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Ser_alcalde">Ser alcalde...</h2>
+        <p class="credito">A. Díaz. Música: P. Tomás. (Del LP “1ª Komunión”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/04%20-%20Ser%20alcalde....mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Hace varios años que nací,<br>y algunos menos que empecé a pensar.<br>Siempre forjando mi porvenir,<br>y para comer tendré que sudar.<br>&nbsp;&nbsp;&nbsp; Yo soy pobre, ilustrísimo alcalde.<br>&nbsp;&nbsp;&nbsp; Yo soy pobre, y tu vives de balde.<br>Nadie es profeta en su tierra,<br>pero la política la puso en tu poder.<br>Has sabido robar la guita,<br>así lo demuestra tu American-Express.<br>&nbsp;&nbsp;&nbsp; Yo soy pobre, ilustrísimo alcalde.<br>&nbsp;&nbsp;&nbsp; Yo soy pobre, y tu vives de balde.<br>Tú tranquilo y sigue chupando,<br>los impuestos te darán de comer.<br>Nosotros seguiremos currando,<br>pero tú y tu partido no dejáis de joder.<br>&nbsp;&nbsp;&nbsp; Yo soy pobre, ilustrísimo alcalde.<br>&nbsp;&nbsp;&nbsp; Yo soy pobre, y tu vives de balde.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Consumir">Consumir</h2>
+        <p class="credito">Letra: J. Gallardo. Música: P. Tomás. (Del LP “1ª Komunión”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/05%20-%20Consumir.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Un consejo publicitario<br>para arreglar tu vida.<br>Una imagen engañosa<br>que no muestra lo que es.<br>¿Quién se empeña en decirnos<br>lo que hay que consumir?<br>&nbsp;&nbsp;&nbsp; ¡Consumir!<br>Anuncios televisivos<br>para ingenuos mirones,<br>el día de tu cumpleaños<br>una caja de bombones.<br>¿Quién destroza nuestros ojos<br>con la chispa de la vida?<br>&nbsp;&nbsp;&nbsp; ¡Consumir!<br>Amigo no escaparás<br>las arrugas pronto saldrán.<br>Tenemos la crema ideal<br>que te las quitará.<br>¿Quién se empeña en decirnos<br>lo que hay que consumir?<br>&nbsp;&nbsp;&nbsp; ¡Consumir!</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Que_se_voten_ellos">Que se voten ellos</h2>
+        <p class="credito">Letra: J. Gallardo. Música: 1ª K. (Del LP “1ª Komunión”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/06%20-%20Que%20se%20voten%20ellos.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Reprocháis lo que yo hago.<br>No os consiento las mentiras.<br>Soy un chico muy impaciente,<br>pero siempre algo prudente.<br>No sabéis lo que hacer<br>para comprar mi voto.<br>Mi voto no está en venta.<br>¡Mi voto no está en venta!.<br>&nbsp;&nbsp;&nbsp; ¡Que se voten ellos!,<br>&nbsp;&nbsp;&nbsp; yo no conozco a ninguno.<br>Podéis votaros entre vosotros,<br>podéis seguir chupando del bote,<br>podéis seguir comiéndome el tarro,<br>pero yo me cago en vosotros.<br>Por favor no más engaños,<br>por favor no más mentiras.<br>Estamos ya medio muertos...<br>Y aún os quedan varios años<br>&nbsp;&nbsp;&nbsp; ¡Que se voten ellos!,<br>&nbsp;&nbsp;&nbsp; yo no conozco a ninguno.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Hombre_Salvaje">Hombre Salvaje</h2>
+        <p class="credito">Letra: J. Gallardo. Música: P. Tomás. (Del LP “1ª Komunión”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/07%20-%20Hombre%20salvaje.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Soy un hombre salvaje,<br>capaz de matar para comer.<br>Soy un hombre salvaje,<br>dispuesto a vivir de los demás.<br>Destrozo las vidas con papel de Estado.<br>Amo los negocios. Amo tu dinero.<br>&nbsp;&nbsp;&nbsp; ¡No renunciaré a este juego!<br>Caeré sobre tu cuenta corriente<br>como un lobo va por su presa.<br>Me mente necesita alimento,<br>mi bolsillo quiere dinero...<br>&nbsp;&nbsp;&nbsp; ¡No renunciaré a este juego!<br>No dejaré que se extinga mi raza,<br>mi semilla germinará en el mundo.<br>Mis hijos serán maestros,<br>y todos vosotros, alumnos.<br>&nbsp;&nbsp;&nbsp; ¡No renunciaré a este juego!<br>&nbsp;&nbsp;&nbsp; ¡No se acaba aquí este juego!</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="El_mangui">El mangui</h2>
+        <p class="credito">Letra: J. Gallardo. Música: P. Tomás. (Del LP “1ª Komunión”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/08%20-%20El%20mangui.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">No llegarás...<br>a ser nunca tu mismo.<br>Te arrimarás...<br>al sol que más calienta.<br>Caminarás...<br>como una marioneta.<br>&nbsp;&nbsp;&nbsp; ¿Qué es lo que te falta?<br>&nbsp;&nbsp;&nbsp; ¿Qué es lo que nunca has tenido?.<br>&nbsp;&nbsp;&nbsp; Eres persona o... ¿Jamás has vivido?<br>Vas de legal...<br>pero se te ve el plumero.<br>Serías amigo...<br>si la amistad diese dinero.<br>No cambiarás...<br>Serás el bobo de siempre.<br>&nbsp;&nbsp;&nbsp; ¿Qué es lo que te falta?<br>&nbsp;&nbsp;&nbsp; ¿Qué es lo que nunca has tenido?.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="No_puede_ser">No puede ser</h2>
+        <p class="credito">Letra y música: P. Tomás. (Del LP “1ª Komunión”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/09%20-%20No%20puede%20ser.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Amos del mundo<br>dueños por doquier.<br>Sueños de grandeza,<br>y siempre el poder.<br>&nbsp;&nbsp;&nbsp; No puede ser,<br>&nbsp;&nbsp;&nbsp; nada es verdad,<br>&nbsp;&nbsp;&nbsp; ni un solo deseo<br>&nbsp;&nbsp;&nbsp; se realizará.<br>Mentiras disfrazadas<br>en bellos rituales.<br>Gentes acobardadas<br>fingen vivir bien.<br>&nbsp;&nbsp;&nbsp; No puede ser,<br>&nbsp;&nbsp;&nbsp; nada es verdad,<br>&nbsp;&nbsp;&nbsp; ni un solo deseo<br>&nbsp;&nbsp;&nbsp; se realizará.<br>Trabajas día y noche<br>para poder vivir,<br>esclavo de un sistema...<br>Nunca pienses en ceder<br>&nbsp;&nbsp;&nbsp; No puede ser,<br>&nbsp;&nbsp;&nbsp; nada es verdad,<br>&nbsp;&nbsp;&nbsp; ni un solo deseo<br>&nbsp;&nbsp;&nbsp; se realizará.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Francisquillo">Francisquillo</h2>
+        <p class="credito">Letra: J. Gallardo. Música: A. Díaz, P. Tomás. (Del LP “1ª Komunión”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/10%20-%20Franciskillo.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        Yo siempre quise ser<br>
+        uno de esos listillos,<br>
+        que a los 20 se hacen de oro,<br>
+        y poco después ¡Viva Cristo!.<br>
+        No se bien como se hace,<br>
+        pero lo intento día a día.<br>
+        Hace falta mucha suerte,<br>
+        y un padrino que te diga:<br>
+        &nbsp;&nbsp;&nbsp; ¡Firma aquí, vete tranquilo!<br>
+        &nbsp;&nbsp;&nbsp; Tu pellejo está a salvo, -tu mujer conmigo-.<br>
+        No me ha salido bien la historia,<br>
+        Otra vez me he dado de morros.<br>
+        Voy a comprarme una espada,<br>
+        y un capote pa los toros.<br>
+        &nbsp;&nbsp;&nbsp; ¡Firma aquí, vete tranquilo!<br>
+        &nbsp;&nbsp;&nbsp; Tu pellejo está a salvo, -tu mujer conmigo-.<br>
+        <br>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Goodway_Paco">Goodway Paco</h2>
+        <p class="credito">Letra: J. Gallardo. Música: L. Solaz. (Del LP “1ª Komunión”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/11%20-%20Goodway%20Paco.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Cuarenta largos años<br>explotando a la nación.<br>Cuarenta largos años<br>aplastados por un cabrón.<br>Jodistes a los nuestros<br>en tu puto paredón,<br>con tu sucia dictadura<br>y tu afán de destrucción.<br>&nbsp;&nbsp;&nbsp; Cerdo fascista, puto dictador.<br>&nbsp;&nbsp;&nbsp; Roja es la sangre, muerto estás mejor.<br>Te las dabas de valiente,<br>pues tú eras el mejor.<br>Manejabas a tu antojo<br>los hilos del terror.<br>España era tu causa,<br>y España te olvidó.<br>Pero tus vasallos,<br>aún te invocan con devoción.<br>&nbsp;&nbsp;&nbsp; Cerdo fascista, puto dictador.<br>&nbsp;&nbsp;&nbsp; Roja es la sangre, muerto estás mejor.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Nada_sabras">Nada sabrás</h2>
+        <p class="credito">Letra: J. Gallardo. Música: 1ª K. (Del EP “El gallinero eléctrico”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/12%20-%20Nada%20sabr%C3%A1s.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Qué podemos hacer contra todo,<br>qué necesitamos para vivir en paz.<br>Cuentas veces nos tienen que decir<br>que esto no se puede arreglar.<br>&nbsp;&nbsp;&nbsp; Si intentas saberlo todo,<br>&nbsp;&nbsp;&nbsp; nada, pero nada sabrás.<br>Dale un sentido a la vida,<br>vivir de espaldas a la realidad.<br>El estado, el capital y Dios<br>cierran los ojos de dos en dos.<br>&nbsp;&nbsp;&nbsp; Si intentas saberlo todo,<br>&nbsp;&nbsp;&nbsp; nada, pero nada sabrás.<br>Con nosotros no podrán,<br>las bocas no se pueden cerrar.<br>Dónde está la libertad,<br>que tanto oigo pregonar.<br>&nbsp;&nbsp;&nbsp; Si intentas saberlo todo,<br>&nbsp;&nbsp;&nbsp; nada, pero nada sabrás.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Ajedrez_mortal">Ajedrez mortal</h2>
+        <p class="credito">Letra: A. Díaz. Música: 1ª K. (Del CD "Konfirmación")</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/01%20-%20Ajedrez%20mortal.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Es muy triste ver como los amigos se van,<br>atrapados en un juego en el que vence el rival.<br>El tablero el muy pequeño, seguro te cojerán.<br>En este maldito juego el caballo es tu rival.<br>&nbsp;&nbsp;&nbsp; No empieces la partida,<br>&nbsp;&nbsp;&nbsp; no seas mamón.<br>&nbsp;&nbsp;&nbsp; Las reglas son muy claras...<br>&nbsp;&nbsp;&nbsp; ¡Caballo tumba al peón!<br>Primero uno a la semana, después serán tres.<br>Haciendo horas extras, aún lo llevarás bien.<br>Dejas el trabajo, todo te sale al revés.<br>El fin está muy próximo, ya no sabes quién es quién.<br>&nbsp;&nbsp;&nbsp; No empieces la partida,<br>&nbsp;&nbsp;&nbsp; no seas mamón.<br>&nbsp;&nbsp;&nbsp; Las reglas son muy claras...<br>&nbsp;&nbsp;&nbsp; ¡Caballo tumba al peón!<br>Metido hasta el cuello, las deudas te agobiarán.<br>Por esta razón, los dientes perderás.<br>Los colegas no son ricos, poco te ayudarán.<br>El caballo siempre gana... en este puto ajedrez.<br>&nbsp;&nbsp;&nbsp; No empieces la partida,<br>&nbsp;&nbsp;&nbsp; no seas mamón.<br>&nbsp;&nbsp;&nbsp; Las reglas son muy claras...<br>&nbsp;&nbsp;&nbsp; ¡Caballo tumba al peón!</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Nino_Anarquista">Niño Anarquista</h2>
+        <p class="credito">Letra: J. Gallardo. Música: P. Tomás, L. Solaz. (Del CD "Konfirmación")</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/02%20-%20Ni%C3%B1o%20anarquista.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Voy a daros una pista, soy un niño anarquista.<br>No soy un socialista y mucho menos aliancista.<br>Todos mis amigos, están en mi interior.<br>Mi partido sólo soy yo, y por supuesto, mi religión.<br>Yo no tengo miedo a nada, no pidáis no os debo nada.<br>Sólo creo en mi mismo, pero no en vuestro fascismo.<br>Intentáis engañarme, no creo que podáis.<br>Destrozar mis ideas es lo que deseáis.<br>Yo no leo las revistas, ni concedo entrevistas.<br>Voy a daros una pista, soy un chico anarquista,<br>&nbsp;&nbsp;&nbsp; (Voy a daros una pista)...<br>&nbsp;&nbsp;&nbsp; Supercalifragilísticoespiralidoso.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+        <p class="volver"><a href="#inicio"><br>
+          </a></p>
+        <p class="volver"><a href="#inicio"><br>
+          </a></p>
+        <h2 id="Apestados_Unidos">Apestados Unidos</h2>
+        <p class="credito">Letra: J. Gallardo. Música: 1ª K. (Del CD "Konfirmación")</p>
+        <br>
+        <section class="cancion"><audio controls="controls" preload="none" src="audios/03%20-%20Apestados%20Unidos.mp3">
+            Tu navegador no soporta audio HTML5. </audio><br>
+          <br>
+          <p class="letra">Cómo están las cosas en Sudamérica,<br>qué mal lo llevan nuestros hermanos.<br>Estáis jodiendo su cultura,<br>con vuestras ganas de conquistarlo todo.<br>&nbsp;&nbsp;&nbsp; ¡Vaya una gracia les debe hacer<br>&nbsp;&nbsp;&nbsp; ver allí en la tele a Bush aparecer!<br>Con vuestras balas dais mensajes de paz,<br>en vez de ayudar un poquito más.<br>Conseguiréis vuestro propósito,<br>sois los más fuertes sin lugar a dudas.<br>&nbsp;&nbsp;&nbsp; ¡Vaya una gracia les debe hacer<br>&nbsp;&nbsp;&nbsp; ver allí en la tele a Bush aparecer!<br>Porqué no dejáis de hacer el bobo,<br>no veis que la gente no es idiota.<br>Podríais pensarlo bien,<br>antes de que os partan la boca.<br>&nbsp;&nbsp;&nbsp; ¡Vaya una gracia les debe hacer<br>&nbsp;&nbsp;&nbsp; ver allí en la tele a Bush aparecer!</p>
+          <p class="volver"><a href="#inicio">Volver arriba</a></p>
+        </section>
+        <p class="volver"><a href="#inicio"></a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Jose_Luis">José Luis</h2>
+        <p class="credito">Letra: A. Díaz, J. Gallardo. Música: L. Solaz.&nbsp; (Del CD "Konfirmación")</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/04%20-%20Jose%20Luis.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">José Luis era un chico normal,<br>acabó el colegio como suele pasar.<br>Las notas con un aprobao,<br>en su casa no les pareció mal.<br>El aire que respira en la calle,<br>no es el que hay en su hogar.<br>Sus penas ahoga en vino,<br>la barra, territorio nacional.<br>&nbsp;&nbsp;&nbsp; ¿Dónde encuentra un trabajo?<br>&nbsp;&nbsp;&nbsp; ¿Dónde se puede formar?<br>De qué sirvieron estudios,<br>para tener que vivir en un bar.<br>¿Quién acepta un consejo?<br>ni nadie sabemos mear.<br>Le han ofrecido un currele,<br>esto puede funcionar.<br>Metido ahora entre rejas,<br>despierto sueña con volar.<br>&nbsp;&nbsp;&nbsp; ¿Dónde encuentra un trabajo?<br>&nbsp;&nbsp;&nbsp; ¿Dónde se puede formar?<br>(José Luis, oh, José Luis... Tan bon chiquet que ere...)</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="El_ozono">El ozono</h2>
+        <p class="credito">Letra: J. Gallardo. Música: P. Tomás.&nbsp; (Del CD "Konfirmación")</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/05%20-%20El%20ozono.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Destrozando el medio en que vivimos, no podemos seguir.<br>A todo bicho viviente estamos exterminando.<br>Incluso entre nosotros por el culo nos estamos dando.<br>&nbsp;&nbsp;&nbsp; El ozono, la Amazonia, las ballenas y los parques naturales.<br>No más matanzas indiscriminadas de animales.<br>Boicotearemos la construcción de centrales nucleares.<br>No dejemos que Seprona siga quemando nuestros árboles.<br>&nbsp;&nbsp;&nbsp; Y los pinos, y las focas, y los mares y la de zonas industriales.<br>(Moriremos ahogados en la mierda...)</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="El_monstruo">El monstruo</h2>
+        <p class="credito">Letra: J. Gallardo. Música: P. Tomás.&nbsp; (Del CD "Konfirmación")</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/06%20-%20El%20monstruo.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">El monstruo de las galletas<br>se me ha aparecido en sueños.<br>El color de su piel era azul,<br>tenía el acento madrileño.<br>Dos mil doscientas gaviotas<br>vuelan más allá del mar.<br>Peces en una pecera<br>buscan la libertad.<br>&nbsp;&nbsp;&nbsp; ¿Quién hay detrás de mis ojos?<br>&nbsp;&nbsp;&nbsp; ¿De qué color es mi ser?<br>Una ventana con ojos y boca,<br>me saluda en la habitación.<br>El conejo de la suerte me ha dicho,<br>que no es de ciencia-ficción.<br>La mujer que llevo dentro<br>se ha puesto celosa otra vez,<br>dice que la estoy engañando<br>y ya no se que creer.<br>&nbsp;&nbsp;&nbsp; ¿Quién hay detrás de mis ojos?<br>&nbsp;&nbsp;&nbsp; ¿De qué color es mi ser?</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Solo_ordenes">Sólo órdenes</h2>
+        <p class="credito">Letra: A. Díaz. Música: L. Solaz.&nbsp; (Del CD "Konfirmación")</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/07%20-%20Solo%20ordenes.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">No hay bastantes armas ni bastantes órdenes,<br>para borrar del mapa a millones de seres.<br>Siempre encontrarás alguno en tu cama,<br>que te morderá mientras estés jodiendo.<br>&nbsp;&nbsp;&nbsp; Dios mío sálvame y por favor ten piedad.<br>&nbsp;&nbsp;&nbsp; Yo sólo cumplía órdenes, seguro que lo dirás.<br>La esvástica en el brazo poco puede hacer por ti.<br>Pagarás todas las muertes, ya verás lo que es sufrir.<br>Tu cabeza y tu barriga no lo van a resistir.<br>El dolor y la impotencia te acompañan hasta el fin.<br>&nbsp;&nbsp;&nbsp; Dios mío sálvame y por favor ten piedad.<br>&nbsp;&nbsp;&nbsp; Yo sólo cumplía órdenes, seguro que lo dirás.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Principe_Azul">Príncipe Azul</h2>
+        <p class="credito">Letra: J.Gallardo. Música: 1ª K.&nbsp; (Del CD "Konfirmación")</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/08%20-%20Principe%20Azul.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Cincuenta veces has soñado<br>que se abría la puerta del castillo,<br>y por ella entraba trotando<br>un maromo a lomos de un seiscientos.<br>Cincuenta veces has soñado<br>un altar lleno de flores,<br>el piso casi amueblado,<br>y tirarte a Antonio Ozores.<br>No hay Lauren Postigo,<br>y de verdad yo os digo...<br>&nbsp;&nbsp;&nbsp; Mi Príncipe Azul, me prometió amor.<br>&nbsp;&nbsp;&nbsp; ¡Oh! Príncipe Azul, sólo me das dolor.<br>Y está lloviendo en el campo,<br>mi amor se está mojando.<br>Esta noche toca paliza,<br>el Madrid ha perdido de cuatro.<br>&nbsp;&nbsp;&nbsp; Mi Príncipe Azul, me prometió amor.<br>&nbsp;&nbsp;&nbsp; ¡Oh! Príncipe Azul, sólo me das dolor.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Pide_perdon">Pide perdón</h2>
+        <p class="credito">Letra: J. Gallardo. Música: L. Solaz, P. Tomás.&nbsp; (Del CD "Konfirmación")</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/09%20-%20Pide%20perdon.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Qué bonito es levantarse un domingo por la mañana,<br>ir a la iglesia de tu barrio, y cómo no, rezar el rosario.<br>Mojarte los labios con agua bendita,<br>poner verdes a unos y otros, y escuchar la palabra divina.<br>&nbsp;&nbsp;&nbsp; Pide perdón por tus pecados, estás en tu derecho.<br>&nbsp;&nbsp;&nbsp; Pide perdón por tus pecados, estás en tu derecho.<br>Mañana volverás para apartar de ti el pecado.<br>Mañana hablarás de amor, del que está enfrente y del que está a tu lado<br>&nbsp;&nbsp;&nbsp; Pide perdón por tus pecados, estás en tu derecho.<br>&nbsp;&nbsp;&nbsp; Pide perdón por las acciones que cada día vienes realizando.<br>Amaos unos a los otros, como yo os he amado,<br>y señalad con el dedo a todos vuestros queridos hermanos.<br>&nbsp;&nbsp;&nbsp; Pide perdón por tus pecados, estás en tu derecho.<br>&nbsp;&nbsp;&nbsp; Pide perdón por las acciones que cada día vienes realizando.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="El_Racismo">El Racismo</h2>
+        <p class="credito">Letra: A. Díaz. Música: 1ª K. (Del CD "Konfirmación")</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/10%20-%20El%20racismo.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Os molestaba el color de su piel,<br>no era razón para esclavizarlos.<br>Hacerlos currar no estaba bien,<br>pero faltaba sangre para regocijaros.<br>&nbsp;&nbsp;&nbsp; Campos de algodón, cámaras de gas,<br>&nbsp;&nbsp;&nbsp; hornos crematorios, ¿Eres blanco?, vivirás.<br>Judíos, gitanos, rojos y demás,<br>los exterminabais&nbsp; revueltos en gas.<br>Hubieron algunos que tuvieron mucha suerte,<br>fueron el proyecto de una raza fuerte.<br>&nbsp;&nbsp;&nbsp; Campos de algodón, cámaras de gas,<br>&nbsp;&nbsp;&nbsp; hornos crematorios, ¿Eres blanco?, vivirás.<br>Hay que ver lo tercermundistas que somos,<br>si no somos personas, ¿qué seremos?<br>Negros, amarillos o a cuadros,<br>no es razón para humillarlos.<br>Habéis visto el agujero de vuestro culo,<br>también es negro y no os quejáis.<br>Basta de racismo, racismo ridículo,<br>porque conmigo nunca colaréis.<br>&nbsp;&nbsp;&nbsp; Campos de algodón, cámaras de gas,<br>&nbsp;&nbsp;&nbsp; hornos crematorios, ¿Eres blanco?, vivirás.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Secuestro_legal">Secuestro legal</h2>
+        <p class="credito">Letra: A. Díaz. Música: P. Tomás, L. Solaz.&nbsp; (Del CD "Konfirmación")</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/11%20-%20Secuestro%20legal.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Alguien que lo explique, por favor.<br>¿Por qué tienen que vivir ellos mejor?.<br>Tienes que servir a tu Madre Patria...<br>¡No me jorobéis. Mi madre está en casa!<br>&nbsp;&nbsp;&nbsp; ¡Cómo disfruto mi coronel!<br>&nbsp;&nbsp;&nbsp; Me estoy corriendo mi brigada.<br>&nbsp;&nbsp;&nbsp; Vosotros gordos cual barriles.<br>&nbsp;&nbsp;&nbsp; Y mi vida tenéis controlada.<br>Jodedme, jodedme, voy a aguantar.<br>He de vigilar vuestros intereses.<br>Tararí por aquí, tararí por allá.<br>Como pierdo el culo pa no sacar ná.<br>&nbsp;&nbsp;&nbsp; ¡Cómo disfruto mi coronel!<br>&nbsp;&nbsp;&nbsp; Me estoy corriendo mi brigada.<br>&nbsp;&nbsp;&nbsp; Vosotros gordos cual barriles.<br>&nbsp;&nbsp;&nbsp; Y mi vida tenéis controlada.<br>Se aproxima el día final.<br>¿Te dejarán ir o te harán quedar?<br>Último desfile, última humillación.<br>Con la blanca en la mano... ¡A la calle, copón!<br>&nbsp;&nbsp;&nbsp; ¡Cómo disfruto mi coronel!<br>&nbsp;&nbsp;&nbsp; Me estoy corriendo mi brigada.<br>&nbsp;&nbsp;&nbsp; Vosotros gordos cual barriles.<br>&nbsp;&nbsp;&nbsp; Y mi vida tenéis controlada.<br>Lloras de alegría. Se acabó el secuestro.<br>Te das media vuelta, un corte de mangas.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Apocalipsis_I">Apocalipsis I</h2>
+        <p class="credito">Letra J. Gallardo. Música: 1ª K.&nbsp; (Del CD "Konfirmación")</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/12%20-%20Apocalipsis%20I.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Un cuerpo despierta asustado.<br>Todavía no ha amanecido.<br>¿Qué es lo que está pasando?<br>¿De dónde viene ese ruido?<br>De luces se llena el cielo,<br>los niños preguntan ¿Qué es eso?<br>Corriendo llegas hasta el refugio<br>gente nerviosa y en el suelo.<br>&nbsp;&nbsp;&nbsp; Sin peinarse, mal vestidos,<br>&nbsp;&nbsp;&nbsp; Deja las gafas, coge a los hijos.<br>Un gran ruido invade la sala,<br>el color negro llena sus ojos.<br>Es la última mirada,<br>es la última mirada.<br>&nbsp;&nbsp;&nbsp; Desastres, horrores.<br>&nbsp;&nbsp;&nbsp; Escombros y muertes.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Barrios_bajos">Barrios bajos</h2>
+        <p class="credito">J. Gallardo. Música: P. Tomás, L. Solaz. ( Del single producido por el IVAJ.)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/13%20-%20Barrios%20bajos.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Barrios bajos, sucias calles,<br>miedo en los ojos, corre y no pares.<br>El te ha visto pisar su zona,<br>frente a la cara, fría la hoja.<br>&nbsp;&nbsp;&nbsp; Barrios bajos, ten cuidado<br>Mamá lo dijo: ten cuidado,<br>hay peligro. Barrios bajos.<br>Limpia el filo como si nada,<br>y en otra esquina, luce su cara.<br>&nbsp;&nbsp;&nbsp; Barrios bajos, ten cuidado</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Apocalipsis_II">Apocalipsis II</h2>
+        <p class="credito">Letra: J. Gallardo. Música: P. Tomás. ( Del single producido por el IVAJ.)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/14%20-%20Apocalipsis%20II.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Buenos días, radio-escuchas.<br>Os saluda Lorenzo Martín.<br>Abrid bien vuestros oídos,<br>y escuchad lo que os voy a decir.<br>Los titulares de la prensa<br>me han dañado el corazón,<br>no hay ni una buena noticia,<br>y encima amanece sin sol.<br>Hoy la policía ha incautado<br>dos mil kilos de hachís.<br>Ha habido un terremoto en Managua,<br>graniza con fuerza en Madrid.<br>Los humanos han roto la tierra,<br>ya no tienen dónde ir.<br>Como una nuez ha sido partida,<br>sus trozos no se pueden unir.<br>Gracias, terráqueos.<br>Gracias, mil.<br>De ésta no nos salva<br>ni el mago Merlín.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Malditos_concursos">Malditos concursos</h2>
+        <p class="credito">Letra: J. Gallardo. Música: 1ª K. ( Del LP “Matraka Monsters”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/15%20-%20Malditos%20concursos.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Mucho concurso en la tele<br>nos están poniendo.<br>En&nbsp; unos ganan coches,<br>en otros apartamentos.<br>Si usted participa, si usted participa,<br>puede hallar la felicidad.<br>Comprando el lavavajillas<br>que de moda está,<br>no tiene usted dinero<br>para llegar a fin de mes.<br>Puede que en este sorteo<br>resulte agraciado.<br>Participe, participe, ¡Participe, participe!<br>Vaya a la tele<br>y desde allí<br>salude a su familia,<br>salude, ¡Salude!<br>Un, dos, tres aqui estamos con usted otra vez.<br>Un, dos, tres aquí estamos jodiendo otra vez.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="La_fiesta">La fiesta</h2>
+        <p class="credito">Letra: J. Gallardo. Música: 1ª K. ( Del LP “Matraka Monsters”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/16%20-%20La%20fiesta.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">En la fiesta divertida<br>el que no baila muere aburrido.<br>Si no llevas traje <br>no te comes una rosca.<br>&nbsp;&nbsp;&nbsp; Se lo pasan bien o solo lo hacen ver...<br>Estás obligado a reír y saltar.<br>Nadie te entiende, copón ya!<br>No respondo de mis actos,<br>puedo saltar dentro de nada<br>&nbsp;&nbsp;&nbsp; Se lo pasan bien o solo lo hacen ver...<br>Voy a destrozarlo todo,<br>la esquizofrenia me traslada.<br>No respondo de mis actos,<br>mierda de fiesta divertida<br>&nbsp;&nbsp;&nbsp; Se lo pasan bien o solo lo hacen ver.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Huelga_de_hambre">Huelga de hambre. (Directo)</h2>
+        <p class="credito">Letra y música: 1ª K.( Del LP en directo “Rocke’n’Babia”)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/17%20-%20Huelga%20de%20hambre%20%28Live%29.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">Gasta toda tu energía<br>ponte manos a la obra.<br>Agota tres litros de sangre<br>y muérete en buena hora.<br>&nbsp;&nbsp;&nbsp; Yo tenía treinta años,<br>&nbsp;&nbsp;&nbsp; me convertí en un calavera,<br>&nbsp;&nbsp;&nbsp; por hacer caso de alguien,<br>&nbsp;&nbsp;&nbsp; que no me dijo quién era.<br>Pues me declaro<br>en huelga de hambre.<br>Ni a los piojos,<br>les chupo la sangre.<br>Espero que de resultado,<br>antes de quedarme chupado.<br>&nbsp;&nbsp;&nbsp; Yo tenía treinta años,<br>&nbsp;&nbsp;&nbsp; me convertí en un calavera,<br>&nbsp;&nbsp;&nbsp; por hacer caso de alguien,<br>&nbsp;&nbsp;&nbsp; que no me dijo quién era.<br>El mundo nunca cambia<br>por más que controle mi dieta.<br>Concha, ya estoy aquí...<br>¿qué hay esta noche para cenar?.<br>&nbsp;&nbsp;&nbsp; Yo tenía treinta años,<br>&nbsp;&nbsp;&nbsp; me convertí en un calavera,<br>&nbsp;&nbsp;&nbsp; por hacer caso de alguien,<br>&nbsp;&nbsp;&nbsp; que no me dijo quién era.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="Intro">Intro</h2>
+        <p class="credito">Música: L. Solaz. (Inédita. Grabado en Alcora el 28/4/90)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/Intro.mp3"> <source
+
+            src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">&nbsp;</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="No_puedes_mas">No puedes más</h2>
+        <p class="credito">Letra y música: P. Tomás. (Inédita. Grabado en Alcora el 28/4/90)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/No%20puedes%20mas.mp3">
+          <source src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">La noche te atrapó<br>en un sucio callejón.<br>El miedo y la confusión,<br>se mezclaron sin razón.<br>&nbsp;&nbsp;&nbsp; No puedes más, tu cabeza va a estallar.<br>&nbsp;&nbsp;&nbsp; Y gritarás, dando vueltas sin parar.<br>&nbsp;&nbsp;&nbsp; No puedes más... No puedes más.<br>El Chato ya se fué,<br>nada puedes ya ligar.<br>El Gaviota y el San Juan<br>no se enrollan si no hay papel.<br>&nbsp;&nbsp;&nbsp; No puedes más, tu cabeza va a estallar.<br>&nbsp;&nbsp;&nbsp; Y gritarás, dando vueltas sin parar.<br>&nbsp;&nbsp;&nbsp; No puedes más... No puedes más.<br>Todo es desesperación,<br>Miedo angustia y ansiedad.<br>la muerte o la locura,<br>cualquier día te secuestrarán.<br>&nbsp;&nbsp;&nbsp; No puedes más, tu cabeza va a estallar.<br>&nbsp;&nbsp;&nbsp; Y gritarás, dando vueltas sin parar.<br>&nbsp;&nbsp;&nbsp; No puedes más... No puedes más.</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <section class="cancion">
+        <h2 id="El_Nani">El Nani</h2>
+        <p class="credito">Adaptación desafortunada. (Inédita. Grabado en Alcora el 28/4/90)</p>
+        <!-- REPRODUCTOR --> <br>
+        <audio controls="controls" preload="none" src="audios/El%20nani.mp3"> <source
+
+            src="audios/01%20-%201a%20Komunion.mp3" type="audio/mpeg"> Tu
+          navegador no soporta audio HTML5. </audio><br>
+        <br>
+        <p class="letra">&nbsp;</p>
+        <p class="volver"><a href="#inicio">Volver arriba</a></p>
+      </section>
+      <br>
+    </main>
   </body>
 </html>
