@@ -1,93 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vídeos – 1ª KOMUNION</title>
-  <link rel="stylesheet" href="estilos-int.css">
-
-  <!-- Estilos para centrar y hacerlos responsive -->
-  <style>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vídeos – 1ª KOMUNION</title>
+    <link rel="stylesheet" href="estilos-int.css">
+    <style>
     .videos-container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2rem;               /* espacio entre vídeos */
+      gap: 2rem;
       padding: 2rem 1rem;
     }
     .video-single {
       width: 100%;
-      max-width: 640px;        /* mismo ancho que antes */
+      max-width: 640px;
+      text-align: center;   /* centra título + enlace */
     }
     .video-single iframe {
       width: 100%;
       height: auto;
-      aspect-ratio: 16 / 9;    /* mantiene proporción */
+      aspect-ratio: 16 / 9;
       border: none;
     }
+    .video-title {
+      margin: 0 0 .5rem 0;
+      font-size: 2.1rem;
+      color: #ff0000;
+      font-weight: 700;
+    }
+    .link-youtube {
+      display: inline-block;
+      margin-top: .4rem;
+      font-size: .9rem;
+      color: #ffff00;
+      text-decoration: none;
+    }
+    .link-youtube:hover {
+      text-decoration: underline;
+    }
   </style>
-</head>
-
-<body>
-  <!-- Logo -->
-  <header class="cabecera">
-    <a href="index.htm" class="logo">
-      <img src="imagenes/texto%20logo1.gif" alt="1ª KOMUNION">
-    </a>
-  </header>
-
-  <!-- Menú -->
-  <nav class="nav-principal">
-    <ul>
-      <li><a href="inicio.htm">Inicio</a></li>
-      <li><a href="biografia.htm">Biografía</a></li>
-      <li><a href="discografia.htm">Discografía</a></li>
-      <li><a href="imagenes.htm">Imágenes</a></li>
-      <li><a href="letras.htm">Audios</a></li>
-      <li><a href="videos.htm" class="active">Vídeos</a></li>
-      <li><a href="prensa.htm">Prensa</a></li>
-      <li><a target="_blank" href="https://facebook.com/1aKomunion">Facebook</a></li>
-    </ul>
-  </nav>
-
-  <!-- Vídeo 1 -->
-<div class="video-single">
-  <h3 class="video-title">Llum d'estiu - 1989</h3>
-  <iframe src="https://www.youtube.com/embed/5hAwmdKv508"
-          allowfullscreen></iframe>
-</div>
-
-<!-- Vídeo 2 -->
-<div class="video-single">
-  <h3 class="video-title">Bestialc 2008 (Completo)</h3>
-  <iframe src="https://www.youtube.com/embed/VIDEO_ID_2"
-          allowfullscreen></iframe>
-</div>
-
-<!-- Vídeo 3 -->
-<div class="video-single">
-  <h3 class="video-title">II Vive Rock 2011 (Completo)</h3>
-  <iframe src="https://www.youtube.com/embed/VIDEO_ID_3"
-          allowfullscreen></iframe>
-</div>
-
-<!-- Vídeo 4 -->
-<div class="video-single">
-  <h3 class="video-title">Bestialc 2013 (Completo)</h3>
-  <iframe src="https://www.youtube.com/embed/VIDEO_ID_4"
-          allowfullscreen></iframe>
-</div>
-
-<!-- Vídeo 5 -->
-<div class="video-single">
-  <h3 class="video-title">Quería el mundo cambiar (Homenaje a Morcillo)</h3>
-  <iframe src="https://www.youtube.com/embed/VIDEO_ID_5"
-          allowfullscreen></iframe>
-</div>
-
-      
+  </head>
+  <body>
+    <header class="cabecera"> <a href="index.htm" class="logo"> </a><br>
+      <a href="index.htm" class="logo"><img src="imagenes/texto%20logo1.gif" alt="1ª KOMUNION">
+      </a> </header>
+    <nav class="nav-principal">
+      <ul>
+        <li><a href="inicio.htm">Inicio</a></li>
+        <li><a href="biografia.htm">Biografía</a></li>
+        <li><a href="discografia.htm">Discografía</a></li>
+        <li><a href="imagenes.htm">Imágenes</a></li>
+        <li><a href="letras.htm">Audios</a></li>
+        <li><a href="videos.htm" class="active">Vídeos</a></li>
+        <li><a href="prensa.htm">Prensa</a></li>
+        <li><a target="_blank" href="https://facebook.com/1aKomunion">Facebook</a></li>
+      </ul>
+    </nav>
+    <main class="contenido">
+      <div class="videos-container">
+        <!-- VÍDEO 1 -->
+        <div class="video-single">
+          <h3 class="video-title">Llum d'estiu - 1989</h3>
+          <iframe src="https://www.youtube.com/embed/5hAwmdKv508" allowfullscreen=""></iframe>
+          <a class="link-youtube" href="https://youtu.be/5hAwmdKv508" target="_blank"
+            rel="noopener">Ver en YouTube →</a></div>
+        <div class="video-single"><a class="link-youtube" href="https://youtu.be/5hAwmdKv508"
+            target="_blank" rel="noopener"></a><br>
+          <hr style="height: 2px; background-color: #ac40f8; border: none;"> <br>
+        </div>
+        <!-- VÍDEO 2 -->
+        <div class="video-single">
+          <h3 class="video-title">Bestialc 2008 (Completo)</h3>
+          <iframe src="https://www.youtube.com/embed/https://youtu.be/S21teiZJZWA"
+            allowfullscreen=""></iframe> <a class="link-youtube" href="https://youtu.be/S21teiZJZWA"
+            target="_blank" rel="noopener">Ver en YouTube →</a></div>
+        <div class="video-single"><a class="link-youtube" href="https://youtu.be/S21teiZJZWA"
+            target="_blank" rel="noopener"><br>
+          </a><br>
+          <hr style="height: 2px; background-color: #ac40f8; border: none;"> <br>
+        </div>
+        <!-- VÍDEO 3 -->
+        <div class="video-single">
+          <h3 class="video-title">II Vive Rock 2011 (Completo)</h3>
+          <iframe src="https://www.youtube.com/embed/https://youtu.be/xU8h26nwdcw"
+            allowfullscreen=""></iframe> <a class="link-youtube" href="https://youtu.be/xU8h26nwdcw"
+            target="_blank" rel="noopener">Ver en YouTube →</a></div>
+        <div class="video-single"><a class="link-youtube" href="https://youtu.be/xU8h26nwdcw"
+            target="_blank" rel="noopener"><br>
+          </a><br>
+          <hr style="height: 2px; background-color: #ac40f8; border: none;"> <br>
+        </div>
+        <!-- VÍDEO 4 -->
+        <div class="video-single">
+          <h3 class="video-title">Bestialc 2013 (Completo)</h3>
+          <iframe src="https://www.youtube.com/embed/https://youtu.be/_3S-OQ9hf8w"
+            allowfullscreen=""></iframe> <a class="link-youtube" href="https://youtu.be/https://youtu.be/_3S-OQ9hf8w"
+            target="_blank" rel="noopener">Ver en YouTube →</a></div>
+        <div class="video-single"><a class="link-youtube" href="https://youtu.be/https://youtu.be/_3S-OQ9hf8w"
+            target="_blank" rel="noopener"><br>
+          </a><br>
+          <hr style="height: 2px; background-color: #ac40f8; border: none;"> <br>
+        </div>
+        <!-- VÍDEO 5 -->
+        <div class="video-single">
+          <h3 class="video-title">Quería el mundo cambiar </h3>
+          <p><span style="color: red;">(Homenaje a J. Morcillo)</span></p>
+          <p><span style="color: red;"><br>
+            </span></p>
+          <iframe src="https://www.youtube.com/embed/koA2vemFoMA" allowfullscreen=""></iframe>
+          <a class="link-youtube" href="https://youtu.be/koA2vemFoMA" target="_blank"
+            rel="noopener">Ver en YouTube →</a> </div>
+        <br>
       </div>
-    </div>
-  </main>
-</body>
+    </main>
+  </body>
 </html>
