@@ -5,12 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Imágenes – 1ª KOMUNION</title>
     <link rel="stylesheet" href="estilos-int.css">
-  </head>
+    <style>
+  /* --- estilos rápidos de galería --- */
+  .galeria-grupo { margin-bottom: 3rem; }
+  .subapartado   { display:inline-block; margin: .8rem; text-align:center; }
+  .subapartado a { text-decoration:none; color:#ffff00; }
+
+  .subapartado img{
+    max-width:180px;          /* ancho máximo fijo */
+    max-height:120px;         /* alto máximo fijo */
+    width:auto;               /* mantiene proporción */
+    height:auto;              /* mantiene proporción */
+    border:2px solid #6a0dad;
+    transition:transform .2s;
+  }
+  .subapartado a:hover img{ transform:scale(1.05); }
+</style> </head>
   <body>
     <!-- Logo que SIEMPRE vuelve a index.htm -->
-    <header class="cabecera"> <a href="index.htm" class="logo"> <img src="imagenes/texto%20logo1.gif"
+    <header class="cabecera"> <a href="index.htm" class="logo"> <img src="imagenes/texto%20logo1.gif"
           alt="1ª KOMUNION"> </a> </header>
-    <!-- Menú horizontal entre líneas moradas -->
+    <!-- Menú horizontal -->
     <nav class="nav-principal">
       <ul>
         <li><a href="inicio.htm">Inicio</a></li>
@@ -23,49 +38,75 @@
         <li><a target="_blank" href="https://facebook.com/1aKomunion">Facebook</a></li>
       </ul>
     </nav>
-    /* estilos-int.css */ .nav-principal .active { /* ya existente */
-    background: #ac40f8; color: #ffea00;
     <!-- Galería de imágenes -->
     <main class="contenido galeria">
-      <h1>Galería de fotos</h1>
+      <h1>Galería de imágenes</h1>
       <!-- 1988-1992 -->
       <section class="galeria-grupo">
-        <h2>1988 - 1992</h2>
-        <div class="grid-fotos"> <a href="imagenes/1komunion1.jpg"> <img src="imagenes/_1_komunion1.jpg"
-              alt="1ª Komunión LP"></a> <a href="imagenes/1komunion2.jpg"> <img
-              src="imagenes/_1_komunion2.jpg" alt="Contraportada LP"></a> <a href="imagenes/Caratula_konfirmacion%20[800x600].jpg">
-            <img src="imagenes/Caratula_konfirmacion%20[151].jpg" alt="Konfirmación"></a>
-          <a href="imagenes/Contraportada_konfirmacion%20[800x600].jpg"> <img src="imagenes/Contraportada_konfirmacion%20151.jpg"
-              alt="Contraportada Konfirmación"></a> <a href="imagenes/dvd600.jpg">
-            <img src="imagenes/dvd150.jpg" alt="DVD Resurrección"></a> <a href="imagenes/maqueta2.jpg">
-            <img src="imagenes/_maqueta2.jpg" alt="Maqueta Tour 89"></a> <a href="imagenes/singleivaj1.jpg">
-            <img src="imagenes/_single_ivaj1.jpg" alt="Single IVAJ"></a> <a href="imagenes/singleivaj2.jpg">
-            <img src="imagenes/_single_ivaj2.jpg" alt="Contraportada Single"></a>
+        <h2>1988 – 1992</h2>
+        <div class="subapartado"> <a href="file:///C:/Users/1akom/Desktop/web%20kom%20-%20copia/imagenes%201988-1992.html"
+            target="_top"> <img src="imagenes/1988-1992/00.jpg" alt="1988 - 1992">
+          </a><br>
+          <a href="file:///C:/Users/1akom/Desktop/web%20kom%20-%20copia/imagenes%201988-1992.html"
+            target="_top">1988 - 1992</a> </div>
+      </section>
+      <section class="galeria-grupo">
+        <h2>2008 – 2022</h2>
+        <div class="subapartado"> <a href="imagenes%20bestialc%202008.html" target="_top">
+            <img src="imagenes/13%20bestialc%202008/bestialc08_600.jpg" alt="13 bestialc">
+          </a><br>
+          <a href="imagenes%20bestialc%202008.html" target="_top">13º Bestialc
+            (2008)</a> </div>
+        <div class="subapartado"> <a href="imagenes%20legend%202010.html" target="_top">
+            <img src="imagenes/legend%202010/legend%202010.jpg" alt="Pub D'Legend 2010">
+          </a><br>
+          <a href="imagenes%20legend%202010.html" target="_top">Pub D'Legend
+            (2010)</a> </div>
+        <div class="subapartado"> <a href="imagenes%20viverock.html" target="_top">
+            <img src="imagenes/II%20vive%20rock%202011/VIVEROCK_FEST_2011_low.jpg"
+              alt="II Vive Rock"> </a><br>
+          <a href="imagenes%20viverock.html" target="_top">II Vive Rock (2011)</a>
         </div>
-      </section>
-      <!-- XIII BESTIALC -->
-      <section class="galeria-grupo">
-        <h2>XIII BESTIALC 2008</h2>
-        <div class="grid-fotos"> <a href="imagenes/bestialc1.jpg"> <img src="imagenes/_bestialc1.jpg"
-              alt="Bestialc 1"></a> <a href="imagenes/bestialc2.jpg"> <img src="imagenes/_bestialc2.jpg"
-              alt="Bestialc 2"></a> <a href="imagenes/bestialc3.jpg"> <img src="imagenes/_bestialc3.jpg"
-              alt="Bestialc 3"></a> </div>
-      </section>
-      <!-- Pub D'Leyend -->
-      <section class="galeria-grupo">
-        <h2>Pub D'Leyend</h2>
-        <div class="grid-fotos"> <a href="imagenes/dlegend1.jpg"> <img src="imagenes/_dlegend1.jpg"
-              alt="D'Leyend 1"></a> <a href="imagenes/dlegend2.jpg"> <img src="imagenes/_dlegend2.jpg"
-              alt="D'Leyend 2"></a> <a href="imagenes/dlegend3.jpg"> <img src="imagenes/_dlegend3.jpg"
-              alt="D'Leyend 3"></a> </div>
-      </section>
-      <!-- II ViveRock 2011 -->
-      <section class="galeria-grupo">
-        <h2>II ViveRock 2011</h2>
-        <div class="grid-fotos"> <a href="imagenes/viverock1.jpg"> <img src="imagenes/_viverock1.jpg"
-              alt="ViveRock 1"></a> <a href="imagenes/viverock2.jpg"> <img src="imagenes/_viverock2.jpg"
-              alt="ViveRock 2"></a> <a href="imagenes/viverock3.jpg"> <img src="imagenes/_viverock3.jpg"
-              alt="ViveRock 3"></a> </div>
+        <div class="subapartado"> <a href="imagenes%20opal.html" target="_top">
+            <img src="imagenes/opal%202012/MUSICA-POP-540PX.jpg" alt="Sala Opal">
+          </a><br>
+          <a href="galeria-2008-2022.htm">Sala Opal (2012)</a></div>
+        <div class="subapartado"> <a href="imagenes%20legend%202012.html" target="_top">
+            <img src="imagenes/581197_217318588412880_530063187_n.jpg" alt="Pub D'Legend 2012">
+          </a><br>
+          <a href="imagenes%20legend%202012.html" target="_top">Pub D'Legend
+            (2012)</a> </div>
+        <div class="subapartado"> <a href="galeria-2008-2022.htm"> <imagenes src="581197_217318588412880_530063187_n.jpg"
+              alt="18º Bestialc"> </imagenes></a><a href="imagenes%20bestialc%202013.html"
+            target="_top"><img src="imagenes/18%20bestialc%202013/bestialc2013%20[1024x768].jpg"
+              alt="bestialc 2013"></a><br>
+          <a href="imagenes%20bestialc%202013.html" target="_top">18º Bestialc
+            (2013)</a> </div>
+        <div class="subapartado"> <a href="imagenes%20ultrasons%202013.html" target="_top">
+            <img src="imagenes/ultrasons%202013/504154552_9906735869380990_676120536015087471_n.jpg"
+              alt="4º Ultrasons (2013)"> </a><br>
+          <a href="imagenes%20ultrasons%202013.html" target="_top">4º Ultrasons
+            (2013)</a> </div>
+        <div class="subapartado"> <a href="imagenes%20veneno%20stereo.html" target="_top">
+            <img src="imagenes/veneno%20stereo%202013/1eraKOMUNION.jpg" alt="Veneno Stereo">
+          </a><br>
+          <a href="imagenes%20veneno%20stereo.html" target="_top">Veneno Stereo
+            (2013)</a></div>
+        <div class="subapartado"> <a href="imagenes%20magdalena%20fest.html" target="_top">
+            <img src="imagenes/magdalena%20fest%202014/1962669_738309252859601_1684274662_n.jpg"
+              alt="Magdalena Fest"> </a><br>
+          <a href="imagenes%20magdalena%20fest.html" target="_top">Magdalena
+            Fest (2014)</a> </div>
+        <div class="subapartado"> <a href="imagenes%20terra.html" target="_top">
+            <img src="imagenes/terra%202020/82870247_3048632631827240_5854989509141200896_n.jpg"
+              alt="Pub Terra"> </a><br>
+          <a href="imagenes%20terra.html" target="_top">Pub Terra (2020)</a> </div>
+        <div class="subapartado"> <a href="imagenes%20ultrasons%202022.html" target="_top">
+            <img src="imagenes/13%20ultrasons%202022/481447093_1217258826974311_6857703801058632182_n.jpg"
+              alt="13º Ultrasons"> </a><br>
+          <a href="imagenes%20ultrasons%202022.html" target="_top">13º Ultrasons
+            (2022)<br>
+          </a></div>
       </section>
     </main>
   </body>
