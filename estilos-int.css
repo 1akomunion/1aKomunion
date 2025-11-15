@@ -20,9 +20,8 @@ body {
 .cabecera { text-align: center; }
 
 .logo img {
-    height: 145px;
-    width: auto;
-    max-width: 90vw;
+            max-width: 90%;
+            height: auto;
 }
 
 /* ---------- nav morada ---------- */
@@ -264,6 +263,13 @@ body {
     aspect-ratio: 16 / 9;
 }
 
+.video-title {
+  text-align: center;
+  margin: 0 0 .5rem 0;   /* espacio entre título y vídeo */
+  font-size: 1.1rem;
+  color: #ff0000; 
+  font-weight: 700;
+}
 /* ----------- RESPONSIVE ----------- */
 @media (max-width: 600px) {
     .logo img { max-height: 120px; }
