@@ -289,6 +289,36 @@ body {
         }
 
 
+/* ----------  LIGHTBOX  ---------- */
+#lb-overlay{
+  position:fixed; inset:0;                 /* cubre toda la ventana */
+  background:rgba(0,0,0,.85);
+  display:none; justify-content:center; align-items:center;
+  z-index:9999;
+}
+#lb-overlay img{
+  max-width:90vw; max-height:90vh;
+  border:3px solid #fff;
+  box-shadow:0 0 20px #000;
+}
+/* flechas */
+#lb-prev, #lb-next{
+  position:absolute; top:50%; transform:translateY(-50%);
+  font-size:50px; color:#fff; cursor:pointer;
+  padding:20px; user-select:none;
+}
+#lb-prev{ left:20px; }
+#lb-next{ right:20px; }
+#lb-prev:hover, #lb-next:hover{ background:rgba(255,255,255,.2); }
+
+/* X cerrar */
+#lb-close{
+  position:absolute; top:20px; right:30px;
+  font-size:40px; color:#fff; cursor:pointer;
+}
+
+
+
 /* ----------- RESPONSIVE ----------- */
 @media (max-width: 600px) {
     .logo img { max-height: 120px; }
