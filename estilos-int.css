@@ -80,8 +80,10 @@ body {
     margin: 2rem 0;
 }
 .integrante {
-    text-align: center;
-    max-width: 180px;
+  text-align: center;
+  flex: 0 0 180px; /* no crecer, no encoger, base 180px */
+  /* o para permitir crecimiento:
+     flex: 1 1 180px; */
 }
 .integrante img {
     width: 100%;
