@@ -11,21 +11,16 @@
             height: 100%;
             margin: 0;
         }
-        body {
+        body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: #000 url("imagenes/_MG_5152b.jpg") no-repeat top center / cover;
-    height: 100dvh; /* Soluciona el recorte en móviles rotados */
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 3vh;
+    z-index: -1; /* Queda detrás de todo */
 }
- @media (orientation: landscape) {
-      body {
-        background-position: top center !important;
-        height: 100dvh;
-      }
-    }
 
       
         /* Sección memoria */
