@@ -5,59 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Inicio – 1ª KOMUNION</title>
     <link rel="stylesheet" href="estilos-int.css">
-    <!-- Fondo exclusivo para inicio.htm -->
+
+    <!-- Estilos propios -->
     <style>
         html, body {
             height: 100%;
             margin: 0;
         }
-        body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000 url("imagenes/_MG_5152b.jpg") no-repeat top center / cover;
-    z-index: -1; /* Queda detrás de todo */
-}
 
-      
-        /* Sección memoria */
-        .memoria {
-            margin-top: 3rem;
+        /* Fondo fijo */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000 url("imagenes/_MG_5152b.jpg") no-repeat top center / cover;
+            z-index: -1;
         }
+
+        /* Distribución general: cabecera + menú arriba, contenido centrado */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Contenedor del contenido centrado */
+        main.contenido {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* La sección “memoria” siempre en columna */
+        .memoria {
+            display: flex;
+            flex-direction: column;    /* <-- fuerza vertical */
+            align-items: center;       /* centra horizontalmente */
+            justify-content: center;
+        }
+
+        /* Estilo de la foto */
         .foto-memoria {
             width: 180px;
             height: 180px;
             object-fit: cover;
             border-radius: 50%;
             border: 3px solid #ff0000;
+            margin-bottom: 1rem;   /* separa la imagen del texto */
         }
+
+        /* Estilo del texto */
         .texto-memoria {
-    margin-top: 1rem;
-    font-size: 1.1rem;
-    line-height: 1.4;
-
-    /* Fondo semitransparente */
-    background: rgba(0, 0, 0, 0.55);
-    padding: 0.8rem 1.2rem;
-    border-radius: 12px;
-
-    /* Para mejorar lectura en móviles */
-    backdrop-filter: blur(2px);
-    display: inline-block;
-}
-      
+            font-size: 1.1rem;
+            line-height: 1.4;
+            background: rgba(0, 0, 0, 0.55);
+            padding: 0.8rem 1.2rem;
+            border-radius: 12px;
+            backdrop-filter: blur(2px);
+            display: inline-block;
+        }
     </style>
   </head>
-  <body>
-    <header class="cabecera"> <a href="index.htm" class="logo"><img src="imagenes/texto%20logo1.gif"
 
-          alt="1ª KOMUNION"></a> </header>
+  <body>
+
+    <!-- CABECERA -->
+    <header class="cabecera">
+      <a href="index.htm" class="logo">
+        <img src="imagenes/texto%20logo1.gif" alt="1ª KOMUNION">
+      </a>
+    </header>
+
+    <!-- MENÚ -->
     <nav class="nav-principal">
       <ul>
- <li><a href="index.htm" class="active">Inicio</a></li>
+        <li><a href="index.htm" class="active">Inicio</a></li>
         <li><a href="biografia.htm">Biografía</a></li>
         <li><a href="discografia.htm">Discografía</a></li>
         <li><a href="imagenes.htm">Imágenes</a></li>
@@ -66,20 +93,20 @@
         <li><a target="_blank" href="https://facebook.com/1aKomunion">Facebook</a></li>
       </ul>
     </nav>
-    <div style="text-align: center;">
-      <main class="contenido" style="display: flex; flex-direction: column; align-items: center;">
-  <span style="color: yellow;"><br></span>
-  <section class="memoria">
-    <img src="imagenes/Bicidep.jpg" alt="Antonio &quot;Bici&quot; Díaz" class="foto-memoria">
-    <p class="texto-memoria">
-      <span style="color: yellow;">
-        En memoria de<br>
-        Antonio "Bici" Díaz.<br>
-        D.E.P.
-      </span>
-    </p>
-  </section>
-</main>
-    </div>
+
+    <!-- CONTENIDO CENTRADO -->
+    <main class="contenido">
+      <section class="memoria">
+        <img src="imagenes/Bicidep.jpg" alt="Antonio 'Bici' Díaz" class="foto-memoria">
+        <p class="texto-memoria">
+          <span style="color: yellow;">
+            En memoria de<br>
+            Antonio "Bici" Díaz.<br>
+            D.E.P.
+          </span>
+        </p>
+      </section>
+    </main>
+
   </body>
 </html>
